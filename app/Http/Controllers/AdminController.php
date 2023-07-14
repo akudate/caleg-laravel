@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Identitas;
-use App\Models\Users;
 use Illuminate\Http\Request;
-
+use Session;
 class AdminController extends Controller
 {
     public function identitas()
@@ -92,5 +91,11 @@ class AdminController extends Controller
         if ($del) {
             return redirect('admin/identitas')->with('success', 'Identitas Berhasil Dihapus');
         }
+    }
+    public function logout(request $request)
+    {
+        $request->session()->flush();
+
+        return redirect()->to('/');
     }
 }

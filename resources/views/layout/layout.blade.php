@@ -66,6 +66,12 @@
                 <span class="nav-link-text">Identitas</span>
               </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ asset('/logout') }}">
+                   <i class="ni ni-curved-next text-danger"></i>
+                   <span class="nav-link-text">Logout</span>
+                </a>
+            </li>
           </ul>
         </div>
       </div>
