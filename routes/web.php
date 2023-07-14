@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\IdentitasController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,13 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-     return view('welcome');
- });
+Route::get('/', [IdentitasController::class, 'caleg']);
 
 Route::controller(AdminController::class)->group(function () {
-        Route::get('admin/identitas', 'identitas');
-        Route::post('admin/create-identitas', 'store');
-        Route::post('admin/edit-identitas', 'update');
-        Route::get('admin/delete-identitas/{id}', 'delete');
-    });
+    Route::get('admin/identitas', 'identitas');
+    Route::post('admin/create-identitas', 'store');
+    Route::post('admin/edit-identitas', 'update');
+    Route::get('admin/delete-identitas/{id}', 'delete');
+});

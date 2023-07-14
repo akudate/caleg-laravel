@@ -14,5 +14,6 @@ class Identitas extends Model
         "misi",
         "afiliasi",
         "image",
+        "afiliasi_image ",
     ];
 }
