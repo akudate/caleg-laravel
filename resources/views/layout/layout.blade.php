@@ -67,10 +67,39 @@
               </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ asset('/logout') }}">
-                   <i class="ni ni-curved-next text-danger"></i>
-                   <span class="nav-link-text">Logout</span>
-                </a>
+              <a class="nav-link" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-examples">
+                <i class="ni ni-ungroup text-orange"></i>
+                <span class="nav-link-text">Data Master</span>
+              </a>
+              <div class="collapse" id="navbar-examples">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="/admin/agenda" class="nav-link">Agenda</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/admin/dukungan" class="nav-link">Dukungan</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/admin/profile" class="nav-link">Profile</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/admin/berita" class="nav-link">Berita</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/admin/relawan" class="nav-link">Relawan</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <!-- Divider -->
+          <hr class="my-3">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="{{ asset('/logout') }}">
+                 <i class="ni ni-curved-next text-danger"></i>
+                 <span class="nav-link-text">Logout</span>
+              </a>
             </li>
           </ul>
         </div>
@@ -149,7 +178,7 @@
   <script src="/template/assets/vendor/datatables.net-select/js/dataTables.select.min.js"></script>
   <!-- Argon JS -->
   <script src="/template/assets/js/argon.js?v=1.1.0"></script>
-  <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  {{-- <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script> --}}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
   @if (Session::has('success'))

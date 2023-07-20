@@ -9,6 +9,9 @@ use Illuminate\Support\Facades\Session;
 
 class AuthController extends Controller
 {
+    public function login(){
+        return view('login');
+    }
     public function postLogin(request $request)
     {
         if (Auth::attempt(['username' => $request->username, 'password' => $request->password])) {

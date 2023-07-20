@@ -6,7 +6,7 @@
                 <!-- Card header -->
                 <div class="card-header">
                     <h2>
-                        Data Identitas
+                        Data Agenda
                         <button class="float-right btn btn-icon btn-primary" data-toggle="modal" data-target="#modalCreate"
                             type="button">
                             <span class="btn-inner--icon"><i class="fas fa-plus"></i></span>
@@ -19,12 +19,10 @@
                         <thead class="thead-light">
                             <tr>
                                 <th>No</th>
-                                <th>Nama Caleg</th>
-                                <th>Visi</th>
-                                <th>Misi</th>
-                                <th>Afiliasi</th>
-                                <th>Foto Caleg</th>
-                                <th>Logo Afiliasi</th>
+                                <th>Tanggal</th>
+                                <th>Jam</th>
+                                <th>Agenda</th>
+                                <th>Lokasi</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -32,22 +30,17 @@
                             @php
                                 $no = 1;
                             @endphp
-                            @foreach ($identitas as $item)
+                            @foreach ($agenda as $item)
                                 <tr>
                                     <td>{{ $no++ }}</td>
-                                    <td>{{ $item->nama }}</td>
-                                    <td>{{ $item->visi }}</td>
-                                    <td>{{ $item->misi }}</td>
-                                    <td>{{ $item->afiliasi }}</td>
-                                    <td><img src="{{ asset('image/' . $item->image) }}" class="img-fluid" width="100px">
-                                    </td>
-                                    <td><img src="{{ asset('afiliasi_image/' . $item->afiliasi_image) }}" class="img-fluid"
-                                            width="100px">
-                                    </td>
+                                    <td>{{ $item->tanggal }}</td>
+                                    <td>{{ $item->jam }}</td>
+                                    <td>{{ $item->agenda }}</td>
+                                    <td>{{ $item->lokasi }}</td>
                                     <td class="text-center">
                                         <a href="#" data-target="#modalEdit{{ $item->id }}" data-toggle="modal"
                                             class="btn btn-primary"><i class="fa fa-edit"></i></a>
-                                        <a href="{{ asset('admin/delete-identitas/' . $item->id) }}" type="button"
+                                        <a href="{{ asset('admin/delete-agenda/' . $item->id) }}" type="button"
                                             class="btn btn-danger"
                                             onclick="return confirm('Yakin akan menghapus data ini?')"><i
                                                 class="fa fa-trash"></i></a>
@@ -70,36 +63,28 @@
                     <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
                     </button>
                 </div>
-                <form action="create-identitas" method="POST" enctype="multipart/form-data">
+                <form action="create-agenda" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="modal-body">
-                        <label>Nama</label>
+                        <label>Tanggal</label>
                         <div class="form-group">
-                            <input type="text" class="form-control" name="nama" required="required"
-                                placeholder="Masukkan Nama">
+                            <input type="date" class="form-control" name="tanggal" required="required"
+                                placeholder="Masukkan Tanggal">
                         </div>
-                        <label>Visi</label>
+                        <label>Jam</label>
                         <div class="form-group">
-                            <input type="text" class="form-control" name="visi" required="required"
-                                placeholder="Masukkan Visi">
+                            <input type="time" class="form-control" name="jam" required="required"
+                                placeholder="Masukkan Jam">
                         </div>
-                        <label>Misi</label>
+                        <label>Agenda</label>
                         <div class="form-group">
-                            <input type="text" class="form-control" name="misi" required="required"
-                                placeholder="Masukkan Misi">
+                            <input type="text" class="form-control" name="agenda" required="required"
+                                placeholder="Masukkan Agenda">
                         </div>
-                        <label>Afiliasi</label>
+                        <label>Lokasi</label>
                         <div class="form-group">
-                            <input type="text" class="form-control" name="afiliasi" required="required"
-                                placeholder="Masukkan Afiliasi">
-                        </div>
-                        <label>Foto Caleg</label>
-                        <div class="form-group">
-                            <input type="file" name="image" required="required" class="form-control">
-                        </div>
-                        <label>Logo Afiliasi</label>
-                        <div class="form-group">
-                            <input type="file" name="afiliasi_image" required="required" class="form-control">
+                            <input type="text" class="form-control" name="lokasi" required="required"
+                                placeholder="Masukkan Lokasi">
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -112,7 +97,7 @@
     </div>
 
     <!-- Modal Edit-->
-    @foreach ($identitas as $item)
+    @foreach ($agenda as $item)
         <div class="modal fade" id="modalEdit{{ $item->id }}">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
@@ -121,41 +106,30 @@
                         <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
                         </button>
                     </div>
-                    <form action="edit-identitas" method="POST" enctype="multipart/form-data">
+                    <form action="edit-agenda" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="modal-body">
-                            <div class="mb-2 text-center">
-                                <img src="{{ asset('image/' . $item->image) }}" class="img-fluid" width="100px">
-                            </div>
                             <input type="hidden" class="form-control" id="id" name="id"
                                 value="{{ $item->id }}">
-                            <label>Nama</label>
+                            <label>Tanggal</label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="nama" required="required"
-                                    value="{{ $item->nama }}" placeholder="Masukkan Nama">
+                                <input type="date" class="form-control" name="tanggal" required="required"
+                                    value="{{ $item->tanggal }}" placeholder="Masukkan Tanggal">
                             </div>
-                            <label>Visi</label>
+                            <label>Jam</label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="visi" required="required"
-                                    value="{{ $item->visi }}" placeholder="Masukkan Visi">
+                                <input type="time" class="form-control" name="jam" required="required"
+                                    value="{{ $item->jam }}" placeholder="Masukkan Jam">
                             </div>
-                            <label>Misi</label>
+                            <label>Agenda</label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="misi" required="required"
-                                    value="{{ $item->misi }}" placeholder="Masukkan Misi">
+                                <input type="text" class="form-control" name="agenda" required="required"
+                                    value="{{ $item->agenda }}" placeholder="Masukkan Agenda">
                             </div>
-                            <label>Afiliasi</label>
+                            <label>Lokasi</label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="afiliasi" required="required"
-                                    value="{{ $item->afiliasi }}" placeholder="Masukkan Afiliasi">
-                            </div>
-                            <label>Foto Caleg</label>
-                            <div class="form-group">
-                                <input type="file" name="image" class="form-control">
-                            </div>
-                            <label>Logo Afiliasi</label>
-                            <div class="form-group">
-                                <input type="file" name="afiliasi_image" class="form-control">
+                                <input type="text" class="form-control" name="lokasi" required="required"
+                                    value="{{ $item->lokasi }}" placeholder="Masukkan Lokasi">
                             </div>
                         </div>
                         <div class="modal-footer">

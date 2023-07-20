@@ -6,7 +6,7 @@
                 <!-- Card header -->
                 <div class="card-header">
                     <h2>
-                        Data Identitas
+                        Data Berita
                         <button class="float-right btn btn-icon btn-primary" data-toggle="modal" data-target="#modalCreate"
                             type="button">
                             <span class="btn-inner--icon"><i class="fas fa-plus"></i></span>
@@ -19,12 +19,9 @@
                         <thead class="thead-light">
                             <tr>
                                 <th>No</th>
-                                <th>Nama Caleg</th>
-                                <th>Visi</th>
-                                <th>Misi</th>
-                                <th>Afiliasi</th>
-                                <th>Foto Caleg</th>
-                                <th>Logo Afiliasi</th>
+                                <th>Judul</th>
+                                <th>Image</th>
+                                <th>Kategori</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -32,22 +29,16 @@
                             @php
                                 $no = 1;
                             @endphp
-                            @foreach ($identitas as $item)
+                            @foreach ($berita as $item)
                                 <tr>
                                     <td>{{ $no++ }}</td>
-                                    <td>{{ $item->nama }}</td>
-                                    <td>{{ $item->visi }}</td>
-                                    <td>{{ $item->misi }}</td>
-                                    <td>{{ $item->afiliasi }}</td>
-                                    <td><img src="{{ asset('image/' . $item->image) }}" class="img-fluid" width="100px">
-                                    </td>
-                                    <td><img src="{{ asset('afiliasi_image/' . $item->afiliasi_image) }}" class="img-fluid"
-                                            width="100px">
-                                    </td>
+                                    <td>{{ $item->judul }}</td>
+                                    <td><img src="{{ asset('berita_image/' . $item->image) }}" class="img-fluid" width="100px"></td>
+                                    <td>{{ $item->kategori }}</td>
                                     <td class="text-center">
                                         <a href="#" data-target="#modalEdit{{ $item->id }}" data-toggle="modal"
                                             class="btn btn-primary"><i class="fa fa-edit"></i></a>
-                                        <a href="{{ asset('admin/delete-identitas/' . $item->id) }}" type="button"
+                                        <a href="{{ asset('admin/delete-berita/' . $item->id) }}" type="button"
                                             class="btn btn-danger"
                                             onclick="return confirm('Yakin akan menghapus data ini?')"><i
                                                 class="fa fa-trash"></i></a>
@@ -70,36 +61,22 @@
                     <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
                     </button>
                 </div>
-                <form action="create-identitas" method="POST" enctype="multipart/form-data">
+                <form action="create-berita" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="modal-body">
-                        <label>Nama</label>
+                        <label>Judul</label>
                         <div class="form-group">
-                            <input type="text" class="form-control" name="nama" required="required"
-                                placeholder="Masukkan Nama">
+                            <input type="text" class="form-control" name="judul" required="required"
+                                placeholder="Masukkan Judul">
                         </div>
-                        <label>Visi</label>
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="visi" required="required"
-                                placeholder="Masukkan Visi">
-                        </div>
-                        <label>Misi</label>
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="misi" required="required"
-                                placeholder="Masukkan Misi">
-                        </div>
-                        <label>Afiliasi</label>
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="afiliasi" required="required"
-                                placeholder="Masukkan Afiliasi">
-                        </div>
-                        <label>Foto Caleg</label>
+                        <label>Image</label>
                         <div class="form-group">
                             <input type="file" name="image" required="required" class="form-control">
                         </div>
-                        <label>Logo Afiliasi</label>
+                        <label>Kategori</label>
                         <div class="form-group">
-                            <input type="file" name="afiliasi_image" required="required" class="form-control">
+                            <input type="text" class="form-control" name="kategori" required="required"
+                                placeholder="Masukkan Kategori">
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -112,7 +89,7 @@
     </div>
 
     <!-- Modal Edit-->
-    @foreach ($identitas as $item)
+    @foreach ($berita as $item)
         <div class="modal fade" id="modalEdit{{ $item->id }}">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
@@ -121,41 +98,27 @@
                         <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
                         </button>
                     </div>
-                    <form action="edit-identitas" method="POST" enctype="multipart/form-data">
+                    <form action="edit-berita" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="modal-body">
                             <div class="mb-2 text-center">
-                                <img src="{{ asset('image/' . $item->image) }}" class="img-fluid" width="100px">
+                                <img src="{{ asset('berita_image/' . $item->image) }}" class="img-fluid" width="200px">
                             </div>
                             <input type="hidden" class="form-control" id="id" name="id"
                                 value="{{ $item->id }}">
-                            <label>Nama</label>
+                            <label>Judul</label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="nama" required="required"
-                                    value="{{ $item->nama }}" placeholder="Masukkan Nama">
+                                <input type="text" class="form-control" name="judul" required="required"
+                                    value="{{ $item->judul }}" placeholder="Masukkan Judul">
                             </div>
-                            <label>Visi</label>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="visi" required="required"
-                                    value="{{ $item->visi }}" placeholder="Masukkan Visi">
-                            </div>
-                            <label>Misi</label>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="misi" required="required"
-                                    value="{{ $item->misi }}" placeholder="Masukkan Misi">
-                            </div>
-                            <label>Afiliasi</label>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="afiliasi" required="required"
-                                    value="{{ $item->afiliasi }}" placeholder="Masukkan Afiliasi">
-                            </div>
-                            <label>Foto Caleg</label>
+                            <label>Image</label>
                             <div class="form-group">
                                 <input type="file" name="image" class="form-control">
                             </div>
-                            <label>Logo Afiliasi</label>
+                            <label>Kategori</label>
                             <div class="form-group">
-                                <input type="file" name="afiliasi_image" class="form-control">
+                                <input type="text" class="form-control" name="kategori" required="required"
+                                    value="{{ $item->kategori }}" placeholder="Masukkan Kategori">
                             </div>
                         </div>
                         <div class="modal-footer">
