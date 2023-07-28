@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+body {
+    background-color: white;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Use 100% to make the navbar span the entire width of the viewport */
+    height: 13.75rem;
+    background-color: #111111;
+}
+.atas {
+    color: white;
+    width: 9.688rem;
+    height: 4rem;
+    display: flex;
+}
+.atas a {
+    text-decoration: none;
+    color: white;
+}
+.text p {
+    font-weight: bold;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+
+    transition: background-color 0.3s ease;
+}
+.text.active {
+    background-color: #ffcc00;
+    color: #111111;
+}
+
+.nav-image {
+    margin-top: 1.5rem;
+    margin-left: 27px;
+    width: 100px; /* Adjust the width and height as needed */
+    height: 100px;
+    border-radius: 50%; /* This creates a circular shape by setting the border-radius to half of the width/height */
+    overflow: hidden; /* Hide any parts of the image that go beyond the circular shape */
+}
+.nav-image img {
+    width: 100%; /* Make sure the image occupies the entire circular area */
+    height: 100%;
+    object-fit: cover; /* Maintain the aspect ratio of the image and cover the circular area */
+}
+.nomor-urut {
+    margin-top: 1.5rem;
+    width: 90px; /* Set the width and height as needed */
+    height: 90px;
+    border-radius: 50%; /* Create a circular shape */
+    background-color: #111; /* Set the background color of the circular container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ffcc00; /* Add a yellow outline around the circle */
+}
+
+.nomor-urut h1 {
+    font-size: 46px;
+    margin: 0;
+    color: white; /* Set the color of the number inside the circle */
+}
+
+.identitas {
+    margin: auto;
+    margin-left: 1rem;
+    color: white;
+    text-align: left;
+}
+#atas {
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: -15px;
+}
+#bawah1 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffcc00;
+    margin-bottom: -18px;
+}
+#bawah2 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffcc00;
+}
+#bawah3 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffcc00;
+    margin-bottom: -15px;
+    margin-top: 35px;
+}
+#bawah4 {
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+}
