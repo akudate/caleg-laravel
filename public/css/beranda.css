@@ -251,6 +251,7 @@ body {
     font-weight: 400;
 }
 .profile {
+    /* padding-bottom: 6rem; */
     width: 450px;
 }
 .buttprof button {
@@ -288,6 +289,31 @@ body {
     background-color: #111111;
     border-radius: 100px;
 }
+.konten-tengah-bawah button:hover,
+.konten-tengah-bawah:focus {
+    background-color: #ffcc00;
+    color: #111111;
+    cursor: pointer;
+}
+.satu button {
+    background-color: #ffcc00;
+    color: #111111;
+}
+.satu button:hover,
+.satu:focus {
+    background-color: #111111;
+    color: white;
+}
+.dua button {
+    background-color: #ffcc00;
+    color: #111111;
+}
+.dua button:hover,
+.dua:focus {
+    background-color: #111111;
+    color: white;
+}
+
 .dukungan2 {
     margin-top: 1rem;
 }
@@ -295,4 +321,47 @@ body {
     padding-left: 5rem;
     padding-right: 5rem;
     font-weight: 400;
+}
+.gambar-aff img {
+    width: 100%;
+    height: 600px;
+    margin-top: -32rem;
+}
+.gambar-aff p {
+    color: white;
+    text-align: center;
+    margin-top: -20rem;
+    font-size: 38px;
+    font-weight: bold;
+}
+.sosmed {
+    height: 100px;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+.sosmed table {
+    width: 100%;
+    table-layout: fixed; /* Agar lebar kolom tetap */
+    border-collapse: collapse;
+}
+
+.sosmed th {
+    padding: 10px;
+    text-align: center; /* Agar konten di tengah */
+}
+
+.sosmed h2 {
+    /* margin: 0; Menghapus margin default pada h2s */
+    text-align: left;
+    margin-left: 2rem;
+}
+.no-urut button {
+    border-radius: 10000px;
+    height: 171px;
+    width: 171px;
+    color: white;
+    background-color: #111111;
+    border: 0;
+    font-size: 84px;
+    font-weight: bold;
 }

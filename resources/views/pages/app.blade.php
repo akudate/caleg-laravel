@@ -94,12 +94,12 @@
         <table class="dukung">
             <thead>
                 <tr>
-                    <th>
+                    <th class="satu">
                         <h3>JADI RELAWAN</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem est praesentium vero unde
                             cum sint non voluptatibus eos tenetur iure, facere quidem iusto! Corporis iusto est architecto
                             ex vel similique.</p>
-                        <button style="background-color: #ffcc00; color: #111111;">
+                        <button>
                             BERGABUNG
                         </button>
                     </th>
@@ -111,14 +111,33 @@
                         </button>
 
                     </th>
-                    <th>
+                    <th class="dua">
                         <h3>JADI RELAWAN</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem est praesentium vero unde
                             cum sint non voluptatibus eos tenetur iure, facere quidem iusto! Corporis iusto est architecto
                             ex vel similique.</p>
-                        <button style="background-color: #ffcc00; color: #111111;">
+                        <button>
                             BERGABUNG
                         </button>
+                    </th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <div class="gambar-aff">
+        <img src="image/berita1.png"" alt="">
+        <p>Lorem ipsum, dolor sit amet <br> consectetur adipisicing elit.</p>
+    </div>
+    <div class="sosmed" style="">
+        <table>
+            <thead>
+                <tr>
+                    <th class="nama">
+                        <h2>Letnan Jendral TNI <br> Prabowo Subianto</h2>
+                    </th>
+                    <th class="no-urut"><button>02</button></th>
+                    <th class="link">
+                        <i class="fi fi-brands-instagram"></i>
                     </th>
                 </tr>
             </thead>
