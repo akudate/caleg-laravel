@@ -3,6 +3,7 @@
 
 @section('content')
     <link rel="stylesheet" href="css/beranda.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
     <div class="konten-atas">
         <table>
@@ -137,7 +138,21 @@
                     </th>
                     <th class="no-urut"><button>02</button></th>
                     <th class="link">
-                        <i class="fi fi-brands-instagram"></i>
+                        <a href="#">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="#">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                        <a href="#">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </a>
                     </th>
                 </tr>
             </thead>

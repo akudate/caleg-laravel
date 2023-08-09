@@ -14,10 +14,10 @@
 <body>
     <div class="navbar">
         <div class="atas">
-            <a href="#" class="text active">
+            <a href="/" class="text active">
                 <p>Beranda</p>
             </a>
-            <a href="#" class="text">
+            <a href="/profile" class="text">
                 <p>Profile</p>
             </a>
             <a href="#" class="text">

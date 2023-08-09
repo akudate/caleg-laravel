@@ -13,4 +13,10 @@ class IdentitasController extends Controller
 
         return view('pages.app', compact('identitas'));
     }
+    public function profile()
+    {
+        $identitas = Identitas::all();
+
+        return view('pages.profile', compact('identitas'));
+    }
 }

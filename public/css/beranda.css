@@ -365,3 +365,13 @@ body {
     font-size: 84px;
     font-weight: bold;
 }
+.link {
+    margin-top: 2rem;
+    font-size: 28px;
+    margin-left: 7rem;
+    text-indent: 1rem;
+}
+.link a {
+    text-decoration: none;
+    color: #111111;
+}
