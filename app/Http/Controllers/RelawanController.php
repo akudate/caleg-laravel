@@ -18,6 +18,7 @@ class RelawanController extends Controller
             'nama'    => 'required',
             'email'   => 'required',
             'no_hp'   => 'required',
+            'judul'   => 'required',
             'pesan'   => 'required',
         ]);
 
@@ -25,6 +26,7 @@ class RelawanController extends Controller
             'nama'    => $request->nama,
             'email'   => $request->email,
             'no_hp'   => $request->no_hp,
+            'judul'   => $request->judul,
             'pesan'   => $request->pesan,
         ]);
         return redirect('admin/relawan')->with('success', 'Relawan Berhasil Dibuat');

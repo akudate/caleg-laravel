@@ -1,0 +1,133 @@
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.relawan {
+    margin-top: 15rem;
+    margin-left: 2rem;
+    background-color: white;
+    /* height: 1000px; */
+}
+.input-box {
+    margin-left: 39rem;
+    /* position: relative; */
+    height: 60px;
+    max-width: 300px;
+    width: 100%;
+    background: #fff;
+    /* margin: 0 20px; */
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.input-box i,
+.input-box .button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.input-box i {
+    left: 20px;
+    font-size: 30px;
+    color: #707070;
+}
+.input-box input {
+    height: 100%;
+    color: #111111;
+    width: 100%;
+    outline: none;
+    font-size: 18px;
+    font-weight: 400;
+    border: none;
+    padding: 0 155px 0 15px;
+    background-color: transparent;
+}
+.input-box .button {
+    right: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    background-color: #4070f4;
+    cursor: pointer;
+}
+.input-box .button:active {
+    transform: translateY(-50%) scale(0.98);
+}
+
+/* Responsive */
+@media screen and (max-width: 500px) {
+    .input-box {
+        height: 66px;
+        margin: 0 8px;
+    }
+    .input-box i {
+        left: 12px;
+        font-size: 25px;
+    }
+    .input-box input {
+        padding: 0 112px 0 50px;
+    }
+    .input-box .button {
+        right: 12px;
+        font-size: 14px;
+        padding: 8px 18px;
+    }
+}
+.relawan-1 {
+    /* margin-top: rem; */
+    width: 350px;
+    /* height: 283px; */
+    /* margin-left: -0.2em; */
+}
+.judul {
+    /* opacity: 0.3; */
+    margin-left: -5.5rem;
+}
+.relawan-1 p {
+    color: #111111;
+    text-align: left;
+    margin-left: 3.71rem;
+    font-weight: 400;
+}
+
+/* Define a CSS class for form controls */
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #111111;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    margin-left: 3.5rem;
+}
+.form-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-left: -11.5rem;
+}
+.form-control[type="button"],
+.form-control[type="submit"] {
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px 20px;
+    width: 100px;
+}
+textarea {
+    resize: none;
+}
+.custom-hr {
+    border: none;
+    border-top: 3px solid #ffcc00; /* Change color as desired */
+    width: 35%; /* You can adjust the width as needed */
+    margin: 10px 0; /* Add margin for spacing */
+    margin-left: 3.9rem;
+}
+

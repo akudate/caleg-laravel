@@ -12,6 +12,7 @@ class Relawan extends Model
         "nama",
         "email",
         "no_hp",
+        "judul",
         "pesan",
     ];
 }
