@@ -23,6 +23,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [IdentitasController::class, 'caleg']);
 Route::get('/profile', [IdentitasController::class, 'profile']);
+Route::get('/berita', [IdentitasController::class, 'berita']);
 
 Route::middleware(\App\Http\Middleware\AdminMiddleware::class)->group(function () {
     Route::controller(AdminController::class)->group(function () {

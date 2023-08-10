@@ -19,4 +19,9 @@ class IdentitasController extends Controller
 
         return view('pages.profile', compact('identitas'));
     }
+    public function berita()
+    {
+        $identitas = Identitas::all();
+        return view('pages.berita', compact('identitas'));
+    }
 }

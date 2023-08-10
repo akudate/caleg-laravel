@@ -24,9 +24,6 @@
                 <p>Berita</p>
             </a>
             <a href="#" class="text">
-                <p>Profile</p>
-            </a>
-            <a href="#" class="text">
                 <p>Dukungan</p>
             </a>
             <a href="#" class="text">
