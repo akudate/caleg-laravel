@@ -8,6 +8,7 @@ use App\Http\Controllers\DukunganController;
 use App\Http\Controllers\IdentitasController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RelawanController;
+use App\Http\Controllers\SettingController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,8 +25,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [IdentitasController::class, 'caleg']);
 Route::get('/profile', [IdentitasController::class, 'profile']);
 Route::get('/berita', [IdentitasController::class, 'berita']);
-Route::get('/dukungan', [IdentitasController::class, 'dukungan']);
-Route::post('/create-dukungan', [IdentitasController::class, 'storeDukungan']);
 Route::get('/relawan', [IdentitasController::class, 'relawan']);
 Route::post('/create-relawan', [IdentitasController::class, 'storeRelawan']);
 
@@ -66,6 +65,13 @@ Route::middleware(\App\Http\Middleware\AdminMiddleware::class)->group(function (
         Route::post('admin/create-relawan', 'store');
         Route::post('admin/edit-relawan', 'update');
         Route::get('admin/delete-relawan/{id}', 'delete');
+    });
+    Route::controller(SettingController::class)->group(function () {
+        Route::get('admin/setting', 'setting');
+        Route::post('admin/create-setting', 'store');
+        Route::post('admin/edit-setting', 'update');
+        Route::get('admin/delete-setting/{id}', 'delete');
+
     });
 });
 
