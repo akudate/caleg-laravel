@@ -9,6 +9,44 @@
     <link rel="stylesheet" href="css/style.css">
 
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+    @php
+        use App\Models\Setting;
+        
+        $setting = Setting::where('status', 1)->get();
+        
+    @endphp
+    @foreach ($setting as $s)
+        <style>
+            .text.active {
+                background-color: {{ $s->warna }};
+            }
+
+            .nomor-urut {
+                border: 2px solid {{ $s->warna }};
+            }
+
+            #bawah1 {
+
+                color: {{ $s->warna }};
+            }
+
+            #bawah2 {
+
+                color: {{ $s->warna }};
+            }
+
+            #bawah3 {
+
+                color: {{ $s->warna }};
+
+            }
+
+            .copy {
+                color: {{ $s->warna }};
+            }
+        </style>
+    @endforeach
 </head>
 
 <body>
@@ -103,30 +141,29 @@
 
         // Retrieve the active link from local storage on page load
         document.addEventListener('DOMContentLoaded', () => {
-          const activeLink = localStorage.getItem('activeLink');
-          if (activeLink) {
-            navigationLinks.forEach(link => {
-              if (link.getAttribute('href') === activeLink) {
-                link.classList.add('active');
-              }
-            });
-          }
+            const activeLink = localStorage.getItem('activeLink');
+            if (activeLink) {
+                navigationLinks.forEach(link => {
+                    if (link.getAttribute('href') === activeLink) {
+                        link.classList.add('active');
+                    }
+                });
+            }
         });
 
         // Click event listener for navigation links
         navigationLinks.forEach(link => {
-          link.addEventListener('click', (event) => {
-            // Remove "text-active" class from all links
-            navigationLinks.forEach(link => link.classList.remove('active'));
+            link.addEventListener('click', (event) => {
+                // Remove "text-active" class from all links
+                navigationLinks.forEach(link => link.classList.remove('active'));
 
-            // Add "text-active" class to the clicked link
-            link.classList.add('active');
+                // Add "text-active" class to the clicked link
+                link.classList.add('active');
 
-            // Save the active link to local storage
-            localStorage.setItem('activeLink', link.getAttribute('href'));
-          });
+                // Save the active link to local storage
+                localStorage.setItem('activeLink', link.getAttribute('href'));
+            });
         });
-
     </script>
 
 </body>

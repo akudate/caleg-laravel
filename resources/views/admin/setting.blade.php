@@ -27,29 +27,32 @@
                         </thead>
                         <tbody>
                             @foreach ($setting as $item)
-                                <form action="updateStatus" method="POST" enctype="multipart/form-data">
-                                    <input type="hidden" name="id" value="{{ $item->id }}">
-                                    <tr>
-                                        <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->partai }}</td>
-                                        <td> <input type="color" value="{{ $item->warna }}" readonly>
-                                        </td>
-                                        <td>
+                                <input type="hidden" name="id" value="{{ $item->id }}">
+                                <tr>
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td>{{ $item->partai }}</td>
+                                    <td> <input type="color" value="{{ $item->warna }}" readonly>
+                                    </td>
+                                    <td>
+                                        <form action="{{ route('updateStatus') }}" method="POST"
+                                            enctype="multipart/form-data">
                                             @csrf
-                                            <button type="submit" class="btn btn-primary status-btn" name="status" ">Terapkan
-                                                        </button>
-                                                        </td>
-                                                        <td class="text-center">
-                                                                            <a href="#" data-target="#modalEdit{{ $item->id }}" data-toggle="modal"
-                                                                                class="btn btn-primary"><i class="fa fa-edit"></i></a>
-                                                                            <a href="{{ asset('admin/delete-setting/' . $item->id) }}" type="button"
-                                                                                class="btn btn-danger"
-                                                                                onclick="return confirm('Yakin akan menghapus data ini?')"><i
-                                                                                    class="fa fa-trash"></i></a>
-                                                        </td>
-                                            </tr>
+                                            <input type="hidden" name="id" value="{{ $item->id }}">
+                                            <button type="submit" class="btn btn-primary status-btn" name="status"
+                                                value="1">Terapkan</button>
                                         </form>
-     @endforeach
+                                    </td>
+
+                                    <td class="text-center">
+                                        <a href="#" data-target="#modalEdit{{ $item->id }}" data-toggle="modal"
+                                            class="btn btn-primary"><i class="fa fa-edit"></i></a>
+                                        <a href="{{ asset('admin/delete-setting/' . $item->id) }}" type="button"
+                                            class="btn btn-danger"
+                                            onclick="return confirm('Yakin akan menghapus data ini?')"><i
+                                                class="fa fa-trash"></i></a>
+                                    </td>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

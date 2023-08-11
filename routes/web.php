@@ -70,6 +70,7 @@ Route::middleware(\App\Http\Middleware\AdminMiddleware::class)->group(function (
         Route::get('admin/setting', 'setting');
         Route::post('admin/create-setting', 'store');
         Route::post('admin/edit-setting', 'update');
+        Route::post('admin/updateStatus', 'updateStatus')->name('updateStatus');
         Route::get('admin/delete-setting/{id}', 'delete');
 
     });

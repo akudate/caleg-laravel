@@ -4,7 +4,41 @@
 @section('content')
     <link rel="stylesheet" href="css/beranda.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    @foreach ($setting as $s)
+        <style>
+            .konten-atas {
+                background-color: {{ $s->warna }};
+            }
 
+            .no-skew {
+
+                color: {{ $s->warna }};
+            }
+
+            .dukungan {
+                background-color: {{ $s->warna }};
+            }
+
+            .relawan:hover,
+            .relawan:focus {
+                background-color: {{ $s->warna }};
+            }
+
+            .konten-tengah-bawah button:hover,
+            .konten-tengah-bawah:focus {
+                background-color: {{ $s->warna }};
+            }
+
+            .satu button {
+                background-color: {{ $s->warna }};
+                color: #111111;
+            }
+
+            .dua button {
+                background-color: {{ $s->warna }};
+            }
+        </style>
+    @endforeach
     <div class="konten-atas">
         <table>
             <thead>
@@ -76,7 +110,7 @@
                             omnis exercitationem animi harum placeat illo accusamus consectetur atque, magni cupiditate
                             error nulla deserunt, aspernatur quaerat laboriosam quibusdam!</p>
                     </th>
-                    <th class="profile" style="background-color: #ffcc00;">
+                    <th class="profile" style="background-color: {{ $s->warna }};">
                         <div class="buttprof">
                             <button>
                                 <h2>PROFILE</h2>

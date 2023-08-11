@@ -6,14 +6,16 @@ use App\Models\Relawan;
 use App\Models\Identitas;
 use Illuminate\Http\Request;
 use App\Models\Dukungan;
+use App\Models\Setting;
 
 class IdentitasController extends Controller
 {
     public function caleg()
     {
         $identitas = Identitas::all();
+        $setting = Setting::where('status', 1)->get();
 
-        return view('pages.app', compact('identitas'));
+        return view('pages.app', compact('identitas', 'setting'));
     }
     public function profile()
     {
