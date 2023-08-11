@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Relawan;
 use App\Models\Identitas;
 use Illuminate\Http\Request;
+use App\Models\Dukungan;
 
 class IdentitasController extends Controller
 {
@@ -24,6 +25,28 @@ class IdentitasController extends Controller
     {
         $identitas = Identitas::all();
         return view('pages.berita', compact('identitas'));
+    }
+    public function dukungan()
+    {
+        $identitas = Identitas::all();
+        $dukungan = Dukungan::orderBy('created_at','desc')->paginate(6);
+        $jumlah = Dukungan::get()->count();
+        return view('pages.dukungan', compact('identitas','dukungan','jumlah'));
+    }
+    public function storeDukungan(Request $request)
+    {
+        $request->validate([
+            'pesan'   => 'required',
+            'nama'    => 'required',
+            'email'   => 'required',
+        ]);
+
+        Dukungan::insert([
+            'pesan'   => $request->pesan,
+            'nama'    => $request->nama,
+            'email'   => $request->email,
+        ]);
+        return redirect('/dukungan')->with('success', 'Dukungan Berhasil Dibuat');
     }
     public function relawan()
     {

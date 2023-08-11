@@ -14,19 +14,19 @@
 <body>
     <div class="navbar">
         <div class="atas">
-            <a href="/" class="text active">
+            <a href="/" class="text">
                 <p>Beranda</p>
             </a>
             <a href="/profile" class="text">
                 <p>Profile</p>
             </a>
-            <a href="#" class="text">
+            <a href="/berita" class="text">
                 <p>Berita</p>
             </a>
-            <a href="#" class="text">
+            <a href="/dukungan" class="text">
                 <p>Dukungan</p>
             </a>
-            <a href="#" class="text">
+            <a href="/relawan" class="text">
                 <p>Relawan</p>
             </a>
         </div>
@@ -84,18 +84,49 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        $(document).ready(function() {
-            $(".text").on("click", function(event) {
-                // Prevent the default link behavior
-                event.preventDefault();
+        // $(document).ready(function() {
+        //     $(".text").on("click", function() {
+        //         // Prevent the default link behavior
+        //         event.preventDefault();
 
-                // Remove "active" class from all links
-                $(".text").removeClass("active");
+        //         // Remove "active" class from all links
+        //         $(".text").removeClass("active");
 
-                // Add "active" class to the clicked link
-                $(this).addClass("active");
+        //         // Add "active" class to the clicked link
+        //         $(this).addClass("active");
+        //     });
+        // });
+
+
+        // Get all the navigation links with class "text"
+        const navigationLinks = document.querySelectorAll('.text');
+
+        // Retrieve the active link from local storage on page load
+        document.addEventListener('DOMContentLoaded', () => {
+          const activeLink = localStorage.getItem('activeLink');
+          if (activeLink) {
+            navigationLinks.forEach(link => {
+              if (link.getAttribute('href') === activeLink) {
+                link.classList.add('active');
+              }
             });
+          }
         });
+
+        // Click event listener for navigation links
+        navigationLinks.forEach(link => {
+          link.addEventListener('click', (event) => {
+            // Remove "text-active" class from all links
+            navigationLinks.forEach(link => link.classList.remove('active'));
+
+            // Add "text-active" class to the clicked link
+            link.classList.add('active');
+
+            // Save the active link to local storage
+            localStorage.setItem('activeLink', link.getAttribute('href'));
+          });
+        });
+
     </script>
 
 </body>
