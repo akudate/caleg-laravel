@@ -9,9 +9,9 @@ class SettingController extends Controller
 {
     public function setting()
     {
-        $setting = Setting::all();
+        $setting = Setting::get();
 
-        return view('admin.setting', compact('setting'));
+        return view('pages.setting', compact('setting'));
     }
 
     public function store(Request $request)

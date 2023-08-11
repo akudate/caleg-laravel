@@ -40,7 +40,8 @@
                                     <td>{{ $item->alamat_kantor }}</td>
                                     <td>{{ $item->kontak }}</td>
                                     <td>{{ $item->biografi }}</td>
-                                    <td><img src="{{ asset('profile_image/' . $item->image) }}" class="img-fluid" width="100px"></td>
+                                    <td><img src="{{ asset('image/' . $item->foto) }}" class="img-fluid" width="100px">
+                                    </td>
                                     <td class="text-center">
                                         <a href="#" data-target="#modalEdit{{ $item->id }}" data-toggle="modal"
                                             class="btn btn-primary"><i class="fa fa-edit"></i></a>

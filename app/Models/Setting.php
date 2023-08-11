@@ -9,11 +9,16 @@ class Setting extends Model
 {
     use HasFactory;
 
-    protected $table = 'setting';
-    protected $primaryKey = 'id';
+    protected $table = 'partai';
+    protected $primaryKey = 'id_partai';
     protected $fillable = [
-        "partai",
+        "nama_partai",
+        "nama_pendek",
         "warna",
-        "status"
+        "secondary_color",
+        "text_color",
+        "front1",
+        "front2",
+        "logo",
     ];
 }

@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [IdentitasController::class, 'caleg']);
-Route::get('/profile', [IdentitasController::class, 'profile']);
+Route::get('/profile', [ProfileController::class, 'profile']);
 Route::get('/berita', [IdentitasController::class, 'berita']);
 Route::get('/relawan', [IdentitasController::class, 'relawan']);
 Route::post('/create-relawan', [IdentitasController::class, 'storeRelawan']);

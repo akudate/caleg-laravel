@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Identitas extends Model
 {
-    protected $table = 'identitas';
+    protected $table = 'caleg';
     protected $primaryKey = 'id';
     protected $fillable = [
         "nama",
