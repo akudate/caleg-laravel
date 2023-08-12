@@ -13,10 +13,10 @@
     @php
         use App\Models\Setting;
         
-        $setting = Setting::where('status', 1)->get();
+        $partai = Setting::where('id_partai', 23)->get();
         
     @endphp
-    @foreach ($setting as $s)
+    @foreach ($partai as $s)
         <style>
             .text.active {
                 background-color: {{ $s->warna }};
@@ -43,7 +43,7 @@
             }
 
             .copy {
-                color: {{ $s->warna }};
+                color: white;
             }
         </style>
     @endforeach
@@ -74,21 +74,21 @@
                     <tr style="display: flex;">
                         <th class="kiri" style="display: flex;">
                             <div class="nav-image">
-                                <img src="{{ asset('image/' . $identitas->first()->image) }}" alt="caleg">
+                                <img src="images/muhyidin.png" alt="">
                             </div>
-                            <div class="identitas">
-                                <p id="atas">{{ $identitas->first()->nama }}</p>
-                                <p id="bawah1">Calon Presiden Indonesia</p>
-                                <p id="bawah2">Tahun 2099</p>
+                            <div class="prof">
+                                <p id="atas">{{ $profile->nama_lengkap }}</p>
+                                <p id="bawah1">Calon Legislatif Indonesia</p>
+                                <p id="bawah2">Tahun 2024</p>
                             </div>
                         </th>
-                        <th class="kanan" style="display: flex; margin-left: 43rem;">
+                        <th class="kanan" style="display: flex; margin-left: 42rem;">
                             <div class="nomor-urut">
-                                <h1 style="color: white;">02</h1>
+                                <h1 style="color: white;">{{ $partai->where('id_partai', 23)->first()->no_urut }}</h1>
                             </div>
-                            <div class="identitas">
-                                <p id="bawah3">Calon Presiden Indonesia</p>
-                                <p id="bawah4">Tahun 2099</p>
+                            <div class="prof">
+                                <p id="bawah3">Calon Legislatif Indonesia</p>
+                                <p id="bawah4">Tahun 2024</p>
                             </div>
                         </th>
                     </tr>
@@ -105,12 +105,12 @@
             <thead>
                 <th class="kiri" style="display: flex; margin-left: 30rem; margin-top: 2rem;">
                     <div class="nav-image">
-                        <img src="{{ asset('image/' . $identitas->first()->image) }}" alt="caleg">
+                        <img src="images/muhyidin.png" alt="">
                     </div>
-                    <div class="identitas">
-                        <p id="atas">{{ $identitas->first()->nama }}</p>
-                        <p id="bawah1">Calon Presiden Indonesia</p>
-                        <p id="bawah2">Tahun 2099</p>
+                    <div class="prof">
+                        <p id="atas">{{ $profile->nama_lengkap }}</p>
+                        <p id="bawah1">Calon Legislatif Indonesia</p>
+                        <p id="bawah2">Tahun 2024</p>
                     </div>
                 </th>
             </thead>

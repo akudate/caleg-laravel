@@ -4,30 +4,19 @@
 @section('content')
     <link rel="stylesheet" href="css/profile.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    @php
-        use App\Models\Setting;
-        
-        $setting = Setting::where('id_partai', 62)->get();
-        
-    @endphp
-    @foreach ($setting as $s)
-        <style>
-            hr {
-                background-color: {{ $s->warna }};
-            }
-        </style>
-    @endforeach
+
+
     <table>
         <thead>
             <tr>
                 <th class="foto">
-                    <img src="{{ asset('image/' . $profile->foto) }}" alt="">
+                    <img src="images/kangidin.png" alt="">
                 </th>
                 <th class="kanan">
                     <h1>{{ $profile->nama_lengkap }}</h1> <br>
                     <hr>
                     <p class="posisi">Calon Presiden Indonesia Tahun 2099</p>
-                    <p class="partai">{{ $profile->paartai->nama_partai }}</p>
+                    <p class="partai">{{ $profile->partai->nama_partai }}</p>
                     <div class="sosmed">
                         <a href="#">
                             <i class="bi bi-instagram"></i>

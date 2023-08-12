@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\DukunganController;
 use App\Http\Controllers\IdentitasController;
+use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RelawanController;
 use App\Http\Controllers\SettingController;
@@ -22,7 +23,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [IdentitasController::class, 'caleg']);
+Route::get('/', [BerandaController::class, 'caleg']);
 Route::get('/profile', [ProfileController::class, 'profile']);
 Route::get('/berita', [IdentitasController::class, 'berita']);
 Route::get('/relawan', [IdentitasController::class, 'relawan']);

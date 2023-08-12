@@ -4,7 +4,7 @@
 @section('content')
     <link rel="stylesheet" href="css/beranda.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    @foreach ($setting as $s)
+    @foreach ($partai as $s)
         <style>
             .konten-atas {
                 background-color: {{ $s->warna }};
@@ -37,6 +37,10 @@
             .dua button {
                 background-color: {{ $s->warna }};
             }
+
+            .kanan-berita {
+                background-color: {{ $s->warna }};
+            }
         </style>
     @endforeach
     <div class="konten-atas">
@@ -44,7 +48,7 @@
             <thead>
                 <tr>
                     <th class="atas-kiri">
-                        <img src="image/menhan.png" alt="">
+                        <img src="images/kangidin.png" alt="">
                     </th>
                     <th>
                         <div class="jajar">
@@ -84,7 +88,7 @@
             <thead>
                 <tr>
                     <th class="berita-1">
-                        <img src="image/berita1.png" alt="">
+                        <img src="images/kangidin.png" alt="">
                         <button>
                             <h2>25 Juli 2023</h2>
                         </button>
@@ -93,7 +97,7 @@
                             error nulla deserunt, aspernatur quaerat laboriosam quibusdam!</p>
                     </th>
                     <th class="berita-1">
-                        <img src="image/berita1.png" alt="">
+                        <img src="images/kangidin.png" alt="">
                         <button>
                             <h2>25 Juli 2023</h2>
                         </button>
@@ -102,7 +106,7 @@
                             error nulla deserunt, aspernatur quaerat laboriosam quibusdam!</p>
                     </th>
                     <th class="berita-1">
-                        <img src="image/berita1.png" alt="">
+                        <img src="images/kangidin.png" alt="">
                         <button>
                             <h2>25 Juli 2023</h2>
                         </button>
@@ -110,7 +114,7 @@
                             omnis exercitationem animi harum placeat illo accusamus consectetur atque, magni cupiditate
                             error nulla deserunt, aspernatur quaerat laboriosam quibusdam!</p>
                     </th>
-                    <th class="profile" style="background-color: {{ $s->warna }};">
+                    <th class="kanan-berita">
                         <div class="buttprof">
                             <button>
                                 <h2>PROFILE</h2>
@@ -160,7 +164,7 @@
         </table>
     </div>
     <div class="gambar-aff">
-        <img src="image/berita1.png"" alt="">
+        <img src="images/kangidin.png" alt="">
         <p>Lorem ipsum, dolor sit amet <br> consectetur adipisicing elit.</p>
     </div>
     <div class="sosmed" style="">
@@ -168,9 +172,9 @@
             <thead>
                 <tr>
                     <th class="nama">
-                        <h2>Letnan Jendral TNI <br> Prabowo Subianto</h2>
+                        <h2>{{ $profile->nama_lengkap }}</h2>
                     </th>
-                    <th class="no-urut"><button>02</button></th>
+                    <th class="no-urut"><button>{{ $partai->where('id_partai', 23)->first()->no_urut }}</button></th>
                     <th class="link">
                         <a href="#">
                             <i class="bi bi-instagram"></i>

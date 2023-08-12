@@ -8,19 +8,26 @@ body {
     width: 100%;
     height: 1024px;
 }
+.prof {
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    text-align: left;
+}
 .konten-tengah {
     width: 100%;
     height: 700px;
     background-color: #111111;
 }
 .atas-kiri img {
-    margin-left: 4rem;
+    width: 520px;
+    height: 520px;
+    margin-left: 1rem;
     margin-top: 15rem;
-    border-radius: 10%;
+    border-radius: 30%;
 }
 .jajar {
     margin: 50px;
-    margin-top: 40rem;
+    margin-top: 20rem;
     margin-left: 5rem;
     background: #111111;
     width: 650px;
@@ -221,13 +228,13 @@ body {
 }
 .berita-1 {
     width: 300px;
-    /* height: 283px; */
+    height: 283px;
     flex-shrink: 0;
     /* margin-left: -0.2em; */
 }
 .berita-1 img {
     width: 300px;
-    /* height: 283px; */
+    height: 283px;
     flex-shrink: 0;
     margin-left: -0.2em;
 }
@@ -248,9 +255,10 @@ body {
     margin-left: 1rem;
     font-weight: 400;
 }
-.profile {
+.kanan-berita {
     /* padding-bottom: 6rem; */
     width: 450px;
+    background-color: #ffcc00;
 }
 .buttprof button {
     margin-left: -20rem;
@@ -366,7 +374,7 @@ body {
 .link {
     margin-top: 2rem;
     font-size: 28px;
-    margin-left: 7rem;
+    margin-left: 8rem;
     text-indent: 1rem;
 }
 .link a {
