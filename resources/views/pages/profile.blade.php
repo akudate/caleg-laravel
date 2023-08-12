@@ -4,7 +4,19 @@
 @section('content')
     <link rel="stylesheet" href="css/profile.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    @php
+        use App\Models\Setting;
 
+        $partai = Setting::where('id_partai', 23)->get();
+
+    @endphp
+    @foreach ($partai as $s)
+        <style>
+            hr {
+                background-color: {{ $s->warna }};
+            }
+        </style>
+    @endforeach
 
     <table>
         <thead>

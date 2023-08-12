@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
 
+/* Desktop */
+@media (min-width: 1024px) {
 * {
     font-family: "Poppins", sans-serif;
 }
@@ -49,6 +51,9 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+.kanan{
+    margin-left: 62.5rem;
 }
 .nomor-urut {
     margin-top: 1.5rem;
@@ -103,10 +108,263 @@ body {
     font-weight: 500;
     color: white;
 }
+.foot {
+    margin-left: 40rem;
+}
 .copy {
     color: #ffcc00;
     z-index: 3;
     margin-top: -3.5rem;
     text-align: center;
     align-items: center;
+}
+.prof {
+    text-align: left;
+    margin-left: 0.5rem;
+    margin-top: 0.8rem;
+}
+}
+
+
+
+
+/* Style for laptop screens */
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Your CSS styles for laptop here */
+    * {
+        font-family: "Poppins", sans-serif;
+    }
+    body {
+        background-color: white;
+    }
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 13.75rem;
+        background-color: #111111;
+        z-index: 999;
+    }
+    .atas {
+        color: white;
+        width: 9.688rem;
+        height: 4rem;
+        display: flex;
+    }
+    .atas a {
+        text-decoration: none;
+        color: white;
+    }
+    .text p {
+        font-weight: bold;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+
+        transition: background-color 0.3s ease;
+    }
+    .text.active {
+        background-color: #ffcc00;
+        color: #111111;
+    }
+
+    .nav-image {
+        margin-top: 1.5rem;
+        margin-left: 27px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .nav-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .kanan{
+        margin-left: 43rem;
+    }
+    .nomor-urut {
+        margin-top: 1.5rem;
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        background-color: #111;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #ffcc00;
+    }
+
+    .nomor-urut h1 {
+        font-size: 46px;
+        margin: 0;
+        color: white;
+    }
+
+    .identitas {
+        margin: auto;
+        margin-left: 1rem;
+        color: white;
+        text-align: left;
+    }
+    #atas {
+        font-weight: bold;
+        color: white;
+        font-size: 22px;
+        margin-bottom: -15px;
+    }
+    #bawah1 {
+        font-size: 14px;
+        font-weight: 500;
+        color: #ffcc00;
+        margin-bottom: -18px;
+    }
+    #bawah2 {
+        font-size: 14px;
+        font-weight: 500;
+        color: #ffcc00;
+    }
+    #bawah3 {
+        font-size: 14px;
+        font-weight: 500;
+        color: #ffcc00;
+        margin-bottom: -15px;
+        margin-top: 35px;
+    }
+    #bawah4 {
+        font-size: 14px;
+        font-weight: 500;
+        color: white;
+    }
+    .copy {
+        color: #ffcc00;
+        z-index: 3;
+        margin-top: -3.5rem;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+
+
+
+
+
+/* Style for mobile screens */
+@media (max-width: 480px) {
+    /* Your CSS styles for mobile here */
+    * {
+        font-family: "Poppins", sans-serif;
+    }
+    body {
+        background-color: white;
+    }
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 13.75rem;
+        background-color: #111111;
+        z-index: 999;
+    }
+    .atas {
+        color: white;
+        width: 9.688rem;
+        height: 4rem;
+        display: flex;
+    }
+    .atas a {
+        text-decoration: none;
+        color: white;
+    }
+    .text p {
+        font-weight: bold;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+
+        transition: background-color 0.3s ease;
+    }
+    .text.active {
+        background-color: #ffcc00;
+        color: #111111;
+    }
+
+    .nav-image {
+        margin-top: 1.5rem;
+        margin-left: 27px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .nav-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .kanan{
+        margin-left: 62.5rem;
+    }
+    .nomor-urut {
+        margin-top: 1.5rem;
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        background-color: #111;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #ffcc00;
+    }
+
+    .nomor-urut h1 {
+        font-size: 46px;
+        margin: 0;
+        color: white;
+    }
+
+    .identitas {
+        margin: auto;
+        margin-left: 1rem;
+        color: white;
+        text-align: left;
+    }
+    #atas {
+        font-weight: bold;
+        color: white;
+        font-size: 22px;
+        margin-bottom: -15px;
+    }
+    #bawah1 {
+        font-size: 14px;
+        font-weight: 500;
+        color: #ffcc00;
+        margin-bottom: -18px;
+    }
+    #bawah2 {
+        font-size: 14px;
+        font-weight: 500;
+        color: #ffcc00;
+    }
+    #bawah3 {
+        font-size: 14px;
+        font-weight: 500;
+        color: #ffcc00;
+        margin-bottom: -15px;
+        margin-top: 35px;
+    }
+    #bawah4 {
+        font-size: 14px;
+        font-weight: 500;
+        color: white;
+    }
+    .copy {
+        color: #ffcc00;
+        z-index: 3;
+        margin-top: -3.5rem;
+        text-align: center;
+        align-items: center;
+    }
 }

@@ -52,10 +52,9 @@
                     </th>
                     <th>
                         <div class="jajar">
-                            <h1 class="no-skew">Untuk Indonesia yang Lebih Baik</h1>
-                            <p class="no-skew2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam iusto soluta,
-                                fugit, ad et corporis cumque alias beatae perspiciatis asperiores blanditiis. Suscipit
-                                architecto est a magnam esse, deserunt nihil tempora?</p>
+                            <p class="no-skew">Untuk Indonesia yang Lebih Baik</p>
+                            <p class="no-skew2">Mewujudkan Lembaga DPRD yang Aspiratif, Transparan, Akuntabel dan Smart
+                                dalam mendorong terwujudnya masyarakat yang sejahtera dalam perekonomian dan pertanian</p>
                             <button class="dukungan">Dukungan</button>
                             <button class="relawan">Relawan</button>
                         </div>

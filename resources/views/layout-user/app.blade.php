@@ -12,9 +12,9 @@
 
     @php
         use App\Models\Setting;
-        
+
         $partai = Setting::where('id_partai', 23)->get();
-        
+
     @endphp
     @foreach ($partai as $s)
         <style>
@@ -82,7 +82,7 @@
                                 <p id="bawah2">Tahun 2024</p>
                             </div>
                         </th>
-                        <th class="kanan" style="display: flex; margin-left: 42rem;">
+                        <th class="kanan" style="display: flex;">
                             <div class="nomor-urut">
                                 <h1 style="color: white;">{{ $partai->where('id_partai', 23)->first()->no_urut }}</h1>
                             </div>
@@ -103,7 +103,7 @@
     <div class="footer" style="display: flex; background-color: #111111;height: 250px; z-index: 1;">
         <table>
             <thead>
-                <th class="kiri" style="display: flex; margin-left: 30rem; margin-top: 2rem;">
+                <th class="foot" style="display: flex;  margin-top: 2rem;">
                     <div class="nav-image">
                         <img src="images/muhyidin.png" alt="">
                     </div>
