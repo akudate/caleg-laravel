@@ -137,33 +137,38 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem est praesentium vero unde
                             cum sint non voluptatibus eos tenetur iure, facere quidem iusto! Corporis iusto est architecto
                             ex vel similique.</p>
-                        <button>
-                            BERGABUNG
-                        </button>
+                        <a href="relawan">
+                            <button>
+                                BERGABUNG
+                            </button>
+                        </a>
                     </th>
                     <th>
-                        <h1>10 Juta Orang</h1>
+                        <h1>{{ $jumlah }} Orang</h1>
                         <h4>Telah Memberikan Dukungan</h4>
-                        <button class="dukungan2">
-                            BERI DUKUNGAN
-                        </button>
-
+                        <a href="dukungan">
+                            <button class="dukungan2">
+                                BERI DUKUNGAN
+                            </button>
+                        </a>
                     </th>
                     <th class="dua">
                         <h3>JADI RELAWAN</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem est praesentium vero unde
                             cum sint non voluptatibus eos tenetur iure, facere quidem iusto! Corporis iusto est architecto
                             ex vel similique.</p>
-                        <button>
-                            BERGABUNG
-                        </button>
+                        <a href="relawan">
+                            <button>
+                                BERGABUNG
+                            </button>
+                        </a>
                     </th>
                 </tr>
             </thead>
         </table>
     </div>
     <div class="gambar-aff">
-        <img src="images/kangidin.png" alt="">
+        <img src="images/fotopkb.png" alt="">
         <p>Lorem ipsum, dolor sit amet <br> consectetur adipisicing elit.</p>
     </div>
     <div class="sosmed" style="">

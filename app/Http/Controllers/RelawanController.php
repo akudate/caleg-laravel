@@ -2,15 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Profile;
+use App\Models\Setting;
 use App\Models\Relawan;
 use Illuminate\Http\Request;
 
 class RelawanController extends Controller
 {
-    public function index()
+    public function relawan()
     {
-        $relawan = Relawan::all();
-        return view('admin.relawan', compact('relawan'));
+        $relawan = Relawan::where('id_caleg', 62)->first();
+        $profile = Profile::where('id_caleg', 62)->first(); // Menggunakan first() untuk mengambil satu data
+        $partai = Setting::where('id_partai', 23)->get(); // Menggunakan get() untuk mengambil data
+
+        return view('pages.relawan', compact('relawan', 'profile', 'partai'));
     }
     public function store(Request $request)
     {

@@ -2,11 +2,11 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #111111;
+    background-color: white;
 }
 .dukungan {
     margin-top: 15rem;
-    background-color: #111111;
+    background-color: white;
     /* height: 1000px; */
 }
 .input-box {
@@ -15,7 +15,7 @@ body {
     height: 60px;
     max-width: 300px;
     width: 100%;
-    background: #fff;
+    background: #111111;
     /* margin: 0 20px; */
     border-radius: 8px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
@@ -46,7 +46,7 @@ body {
     right: 20px;
     font-size: 16px;
     font-weight: 400;
-    color: #fff;
+    color: #111111;
     border: none;
     padding: 10px 20px;
     border-radius: 6px;
@@ -93,10 +93,10 @@ body {
 .judul {
     /* opacity: 0.3; */
     margin-left: 2rem;
-    color: #fff;
+    color: #111111;
 }
 .dukungan-1 p {
-    color: #fff;
+    color: #111111;
     text-align: left;
     margin-left: 3.71rem;
     font-weight: 400;
@@ -159,7 +159,7 @@ body {
 .form-control[type="button"],
 .form-control[type="submit"] {
     background-color: #272727;
-    color: #fff;
+    color: white;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -171,7 +171,7 @@ textarea {
 }
 .custom-hr {
     border: none;
-    border-top: 3px solid #fff; /* Change color as desired */
+    border-top: 3px solid #111111; /* Change color as desired */
     width: 45%; /* You can adjust the width as needed */
     margin: 10px 0; /* Add margin for spacing */
     margin-left: 2.5rem;

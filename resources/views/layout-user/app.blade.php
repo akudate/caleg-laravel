@@ -78,7 +78,7 @@
                             </div>
                             <div class="prof">
                                 <p id="atas">{{ $profile->nama_lengkap }}</p>
-                                <p id="bawah1">Calon Legislatif Indonesia</p>
+                                <p id="bawah1">Calon Anggota DPRD Kabupaten Cirebon</p>
                                 <p id="bawah2">Tahun 2024</p>
                             </div>
                         </th>
@@ -87,7 +87,7 @@
                                 <h1 style="color: white;">{{ $partai->where('id_partai', 23)->first()->no_urut }}</h1>
                             </div>
                             <div class="prof">
-                                <p id="bawah3">Calon Legislatif Indonesia</p>
+                                <p id="bawah3">Calon Anggota DPRD Kabupaten </p>
                                 <p id="bawah4">Tahun 2024</p>
                             </div>
                         </th>

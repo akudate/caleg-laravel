@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Setting;
 use App\Models\Profile;
 use Illuminate\Http\Request;

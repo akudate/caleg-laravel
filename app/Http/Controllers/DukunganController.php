@@ -3,14 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Models\Dukungan;
+use App\Models\Profile;
+use App\Models\Setting;
 use Illuminate\Http\Request;
 
 class DukunganController extends Controller
 {
-    public function index()
+    public function dukungan()
     {
-        $dukungan = Dukungan::all();
-        return view('admin.dukungan', compact('dukungan'));
+        $dukungan = Dukungan::orderBy('created_at', 'desc')->paginate(6);
+        $jumlah = Dukungan::get()->count();
+        $profile = Profile::where('id_caleg', 62)->first(); // Menggunakan first() untuk mengambil satu data
+        $partai = Setting::where('id_partai', 23)->get(); // Menggunakan get() untuk mengambil data
+
+        return view('pages.dukungan', compact('dukungan', 'jumlah', 'profile', 'partai'));
     }
     public function store(Request $request)
     {
