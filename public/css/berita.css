@@ -9,7 +9,7 @@ body {
     /* height: 1000px; */
 }
 .input-box {
-    margin-left: 39rem;
+    padding-right: 125px;
     /* position: relative; */
     height: 60px;
     max-width: 300px;
@@ -83,7 +83,8 @@ body {
 }
 .berita-1 img {
     margin-top: 3rem;
-    width: 300px;
+    height: 200px;
+    width: 350px;
     /* height: 283px; */
     flex-shrink: 0;
     margin-left: 3.7rem;
@@ -91,10 +92,13 @@ body {
 
 .judul {
     /* opacity: 0.3; */
-    margin-left: -5rem;
+    text-align: left;
+    margin-left: 3.71rem;
+}
+.muted-text{
+    color: #888888;
 }
 .berita-1 p {
-    color: #111111;
     text-align: left;
     margin-left: 3.71rem;
     font-weight: 400;
@@ -113,4 +117,72 @@ body {
     color: #111111;
     text-align: left;
     font-weight: 400;
+}
+
+/* Row class */
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Column classes for a 12-column grid */
+.col-1 {
+  width: 8.33%; /* 1/12 */
+  float: left;
+}
+
+.col-2 {
+  width: 16.66%; /* 2/12 */
+  float: left;
+}
+
+.col-3 {
+  width: 25%; /* 3/12 */
+  float: left;
+}
+
+.col-4 {
+  width: 33.33%; /* 4/12 */
+  float: left;
+}
+
+.col-5 {
+  width: 41.66%; /* 5/12 */
+  float: left;
+}
+
+.col-6 {
+  width: 50%; /* 6/12 */
+  float: left;
+}
+
+.col-7 {
+  width: 58.33%; /* 7/12 */
+  float: left;
+}
+
+.col-8 {
+  width: 66.66%; /* 8/12 */
+  float: left;
+}
+
+.col-9 {
+  width: 75%; /* 9/12 */
+  float: left;
+}
+
+.col-10 {
+  width: 83.33%; /* 10/12 */
+  float: left;
+}
+
+.col-11 {
+  width: 91.66%; /* 11/12 */
+  float: left;
+}
+
+.col-12 {
+  width: 100%; /* 12/12 */
+  float: left;
 }

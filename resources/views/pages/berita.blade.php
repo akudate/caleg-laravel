@@ -5,39 +5,65 @@
 
     <link rel="stylesheet" href="css/berita.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    @php
+        use App\Models\Setting;
 
+        $partai = Setting::where('id_partai', 23)->get();
+
+    @endphp
+    @foreach ($partai as $s)
+        <style>
+            .form-control {
+                background-color: {{ $s->warna }};
+            }
+
+            .form-control::placeholder {
+                color: white;
+                opacity: 0.5;
+            }
+        </style>
+    @endforeach
     <div class="berita">
-        <table>
-            <thead>
-                <tr>
-                    <th>
-                        <h1>Berita Terbaru</h1>
-                    </th>
-                    <th>
-                        <div class="input-box">
-                            <i class="uil uil-search"></i>
-                            <input type="text" placeholder="Cari Berita" />
-                        </div>
-                    </th>
-                </tr>
-                <tr>
-                    <th class="berita-1">
-                        <img src="image/berita1.png" alt="">
-                        <h2 class="judul">Lorem Ipsum</h2>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate temporibus dolore distinctio
-                            omnis exercitationem animi harum placeat illo accusamus consectetur atque, magni cupiditate
-                            error nulla deserunt, aspernatur quaerat laboriosam quibusdam!</p>
-                    </th>
-                    <th class="berita-2">
-                        <img src="image/berita1.png" alt="">
-                        <h2 class="judul">Lorem Ipsum</h2>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate temporibus dolore distinctio
-                            omnis exercitationem animi harum placeat illo accusamus consectetur atque, magni cupiditate
-                            error nulla deserunt, aspernatur quaerat laboriosam quibusdam!</p>
-                    </th>
-                </tr>
-            </thead>
-        </table>
+        <div class="row">
+            <div class="col-8">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                <h1>Berita Terbaru</h1>
+                            </th>
+                        </tr>
+                        <tr>
+                            @foreach ($berita as $item)
+                                <th class="berita-1">
+                                    <img src="{{asset('image/'.$item->image)}}" alt="">
+                                    <h2 class="judul">{{ $item->judul }}</h2>
+                                    <p>{{ $item->isi }}</p>
+                                    <p class="muted-text">{{ $item->created_at->format('d M Y') }} / {{ $item->author }}</p>
+                                </th>
+                            @endforeach
+                        </tr>
+                        <tr>
+                            @foreach ($berita2 as $item)
+                                <th class="berita-1">
+                                    <img src="{{asset('image/'.$item->image)}}" alt="">
+                                    <h2 class="judul">{{ $item->judul }}</h2>
+                                    <p>{{ $item->isi }}</p>
+                                    <p class="muted-text">{{ $item->created_at->format('d M Y') }} / {{ $item->author }}</p>
+                                </th>
+                            @endforeach
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="col-4">
+                <div class="input-box">
+                    <i class="uil uil-search"></i>
+                    <input type="text" placeholder="Cari Berita" />
+                </div>
+            </div>
+        </div>
+
     </div>
 @endsection
 {{-- @section('script')

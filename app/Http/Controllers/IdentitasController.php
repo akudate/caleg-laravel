@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Berita;
 use App\Models\Relawan;
 use App\Models\Identitas;
 use Illuminate\Http\Request;
@@ -26,8 +27,16 @@ class IdentitasController extends Controller
     }
     public function berita()
     {
-        $identitas = Identitas::all();
-        return view('pages.berita', compact('identitas'));
+        $profile = Profile::where('id_caleg', 62)->first(); // Menggunakan first() untuk mengambil satu data
+        $partai = Setting::where('id_partai', 23)->get(); // Menggunakan get() untuk mengambil data
+
+        $berita = Berita::where('id_partai', 23)->orderBy('id_berita', 'desc')->paginate(2);
+
+
+
+        $berita2 = Berita::where('id_partai', 23)->orderBy('id_berita', 'desc')->skip(2)->take(2)->get();
+
+        return view('pages.berita', compact('profile','partai','berita','berita2'));
     }
     public function dukungan()
     {
