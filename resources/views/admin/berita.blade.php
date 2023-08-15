@@ -33,12 +33,13 @@
                                 <tr>
                                     <td>{{ $no++ }}</td>
                                     <td>{{ $item->judul }}</td>
-                                    <td><img src="{{ asset('berita_image/' . $item->image) }}" class="img-fluid" width="100px"></td>
+                                    <td><img src="{{ asset('berita_image/' . $item->image) }}" class="img-fluid"
+                                            width="100px"></td>
                                     <td>{{ $item->kategori }}</td>
                                     <td class="text-center">
-                                        <a href="#" data-target="#modalEdit{{ $item->id }}" data-toggle="modal"
+                                        <a href="#" data-target="#modalEdit{{ $item->id_news }}" data-toggle="modal"
                                             class="btn btn-primary"><i class="fa fa-edit"></i></a>
-                                        <a href="{{ asset('admin/delete-berita/' . $item->id) }}" type="button"
+                                        <a href="{{ asset('admin/delete-berita/' . $item->id_news) }}" type="button"
                                             class="btn btn-danger"
                                             onclick="return confirm('Yakin akan menghapus data ini?')"><i
                                                 class="fa fa-trash"></i></a>

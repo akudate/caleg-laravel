@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     @php
         use App\Models\Setting;
-
+        
         $partai = Setting::where('id_partai', 23)->get();
-
+        
     @endphp
     @foreach ($partai as $s)
         <style>
@@ -36,23 +36,23 @@
                         <tr>
                             @foreach ($berita as $item)
                                 <th class="berita-1">
-                                    <img src="{{asset('image/'.$item->image)}}" alt="">
+                                    <img src="{{ asset('image/' . $item->image) }}" alt="">
                                     <h2 class="judul">{{ $item->judul }}</h2>
-                                    <p>{{ $item->isi }}</p>
-                                    <p class="muted-text">{{ $item->created_at->format('d M Y') }} / {{ $item->author }}</p>
+                                    <p>{{ $item->isi_berita }}</p>
+
                                 </th>
                             @endforeach
                         </tr>
-                        <tr>
+                        {{-- <tr>
                             @foreach ($berita2 as $item)
                                 <th class="berita-1">
-                                    <img src="{{asset('image/'.$item->image)}}" alt="">
+                                    <img src="{{ asset('image/' . $item->image) }}" alt="">
                                     <h2 class="judul">{{ $item->judul }}</h2>
                                     <p>{{ $item->isi }}</p>
                                     <p class="muted-text">{{ $item->created_at->format('d M Y') }} / {{ $item->author }}</p>
                                 </th>
                             @endforeach
-                        </tr>
+                        </tr> --}}
                     </thead>
                 </table>
             </div>

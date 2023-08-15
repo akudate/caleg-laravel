@@ -1,395 +1,392 @@
 @media (min-width: 1024px) {
     html,
-body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-.konten-atas {
-    width: 100%;
-}
-.prof {
-    margin-top: 0rem;
-    margin-left: 0.5rem;
-    text-align: left;
-}
-.konten-tengah {
-    width: 100%;
-    background-color: #111111;
-}
-.atas-kiri img {
-    width: 700px;
-    height: 700px;
-    margin-left: 0rem;
-    margin-top: 15rem;
-    margin-bottom: -0.55rem;
-}
-.jajar {
-    margin: 50px;
-    margin-top: 20rem;
-    margin-left: 5rem;
-    background: #111111;
-    width: 800px;
-    height: 430px;
-    float: left;
-    -ms-transform: skew(20deg);
-    -webkit-transform: skew(20deg);
-    transform: skew(20deg);
-}
-
-.no-skew {
-    font-size: 38px;
-    margin-top: 3rem;
-    -ms-transform: skew(-20deg);
-    -webkit-transform: skew(-20deg);
-    transform: skew(-20deg);
-}
-.no-skew2 {
-    -ms-transform: skew(-20deg);
-    -webkit-transform: skew(-20deg);
-    transform: skew(-20deg);
-    color: white;
-    font-weight: 300;
-    font-size: 22px;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    margin-bottom: 2rem;
-}
-
-/* Button dukungan */
-.dukungan {
-    -ms-transform: skew(-20deg);
-    -webkit-transform: skew(-20deg);
-    transform: skew(-20deg);
-    align-items: center;
-    background-color: #ffcc00;
-    border: 0;
-    border-radius: 100px;
-    box-sizing: border-box;
-    color: #ffffff;
-    cursor: pointer;
-    display: inline-flex;
-    font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
-        "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
-        "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-        "Lucida Grande", Helvetica, Arial, sans-serif;
-    font-size: 26px;
-    font-weight: 600;
-    justify-content: center;
-    line-height: 20px;
-    width: 180px;
-    min-height: 80px;
-    min-width: 0px;
-    overflow: hidden;
-    padding: 0px;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: center;
-    touch-action: manipulation;
-    transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-        box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-        color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-    user-select: none;
-    -webkit-user-select: none;
-    vertical-align: middle;
-}
-
-.dukungan:hover,
-.dukungan:focus {
-    background-color: white;
-    color: #111111;
-}
-
-.dukungan:active {
-    background: #09223b;
-    color: rgb(255, 255, 255, 0.7);
-}
-
-.dukungan:disabled {
-    cursor: not-allowed;
-    background: rgba(0, 0, 0, 0.08);
-    color: rgba(0, 0, 0, 0.3);
-}
-/* Button relawan */
-.relawan {
-    margin-left: 0.5rem;
-    -ms-transform: skew(-20deg);
-    -webkit-transform: skew(-20deg);
-    transform: skew(-20deg);
-    align-items: center;
-    background-color: white;
-    border: 0;
-    border-radius: 100px;
-    box-sizing: border-box;
-    color: #111111;
-    cursor: pointer;
-    display: inline-flex;
-    font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
-        "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
-        "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-        "Lucida Grande", Helvetica, Arial, sans-serif;
-    font-size: 26px;
-    font-weight: 600;
-    justify-content: center;
-    line-height: 20px;
-    width: 180px;
-    min-height: 80px;
-    min-width: 0px;
-    overflow: hidden;
-    padding: 0px;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: center;
-    touch-action: manipulation;
-    transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-        box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-        color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-    user-select: none;
-    -webkit-user-select: none;
-    vertical-align: middle;
-}
-
-.relawan:hover,
-.relawan:focus {
-    background-color: #ffcc00;
-    color: white;
-}
-
-.relawan:active {
-    background: #09223b;
-    color: rgb(255, 255, 255, 0.7);
-}
-
-.relawan:disabled {
-    cursor: not-allowed;
-    background: rgba(0, 0, 0, 0.08);
-    color: rgba(0, 0, 0, 0.3);
-}
-
-.info {
-    margin-top: 3rem;
-    margin-left: 2rem;
-    align-items: center;
-    background-color: white;
-    border: 0;
-    border-radius: 100px;
-    box-sizing: border-box;
-    color: #111111;
-    display: inline-flex;
-    font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
-        "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
-        "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-        "Lucida Grande", Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    justify-content: center;
-    line-height: 20px;
-    width: 200px;
-    height: 80px;
-    overflow: hidden;
-    padding: 0px;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: center;
-    touch-action: manipulation;
-    transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-        box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-        color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-    user-select: none;
-    -webkit-user-select: none;
-    vertical-align: middle;
-}
-/* CSS untuk teks bergerak */
-.moving-text-container {
-    color: white;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    margin-top: 2rem;
-    overflow: hidden; /* Menghindari teks berlebihan keluar dari area yang ditentukan */
-}
-
-.moving-text {
-    /* display: block; Membuat teks berjalan secara horizontal dalam satu baris */
-    animation: moveText 30s linear infinite; /* Animasi bergerak dari kanan ke kiri */
-}
-
-@keyframes moveText {
-    0% {
-        transform: translateX(
-           100%
-        ); /* Teks mulai dari posisi di luar area tampilan di sisi kanan */
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
     }
-    100% {
-        transform: translateX(
-            -100%
-        ); /* Teks bergerak hingga keluar dari area tampilan di sisi kiri */
+    .konten-atas {
+        width: 100%;
+    }
+    .prof {
+        margin-top: 0rem;
+        margin-left: 0.5rem;
+        text-align: left;
+    }
+    .konten-tengah {
+        width: 100%;
+        background-color: #111111;
+    }
+    .atas-kiri img {
+        width: 500px;
+        height: 500px;
+        margin-left: 0rem;
+        margin-top: 26rem;
+        margin-bottom: -0.65rem;
+    }
+    .jajar {
+        margin: 50px;
+        margin-top: 30rem;
+        margin-left: 5rem;
+        background: #111111;
+        width: 680px;
+        height: 330px;
+        float: left;
+        -ms-transform: skew(20deg);
+        -webkit-transform: skew(20deg);
+        transform: skew(20deg);
+    }
+
+    .no-skew {
+        font-size: 34px;
+        /* margin-top: 3rem; */
+        -ms-transform: skew(-20deg);
+        -webkit-transform: skew(-20deg);
+        transform: skew(-20deg);
+    }
+    .no-skew2 {
+        -ms-transform: skew(-20deg);
+        -webkit-transform: skew(-20deg);
+        transform: skew(-20deg);
+        color: white;
+        font-weight: 300;
+        font-size: 18px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Button dukungan */
+    .dukungan {
+        -ms-transform: skew(-20deg);
+        -webkit-transform: skew(-20deg);
+        transform: skew(-20deg);
+        align-items: center;
+        background-color: #ffcc00;
+        border: 0;
+        border-radius: 100px;
+        box-sizing: border-box;
+        color: #ffffff;
+        cursor: pointer;
+        display: inline-flex;
+        font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
+            "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans",
+            Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji",
+            "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+        font-size: 22px;
+        font-weight: 600;
+        justify-content: center;
+        line-height: 20px;
+        width: 180px;
+        min-height: 60px;
+        min-width: 0px;
+        overflow: hidden;
+        padding: 0px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+        touch-action: manipulation;
+        transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+            box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+            color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+        user-select: none;
+        -webkit-user-select: none;
+        vertical-align: middle;
+    }
+
+    .dukungan:hover,
+    .dukungan:focus {
+        background-color: white;
+        color: #111111;
+    }
+
+    .dukungan:active {
+        background: #09223b;
+        color: rgb(255, 255, 255, 0.7);
+    }
+
+    .dukungan:disabled {
+        cursor: not-allowed;
+        background: rgba(0, 0, 0, 0.08);
+        color: rgba(0, 0, 0, 0.3);
+    }
+    /* Button relawan */
+    .relawan {
+        margin-left: 0.5rem;
+        -ms-transform: skew(-20deg);
+        -webkit-transform: skew(-20deg);
+        transform: skew(-20deg);
+        align-items: center;
+        background-color: white;
+        border: 0;
+        border-radius: 100px;
+        box-sizing: border-box;
+        color: #111111;
+        cursor: pointer;
+        display: inline-flex;
+        font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
+            "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans",
+            Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji",
+            "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+        font-size: 22px;
+        font-weight: 600;
+        justify-content: center;
+        line-height: 20px;
+        width: 180px;
+        min-height: 60px;
+        min-width: 0px;
+        overflow: hidden;
+        padding: 0px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+        touch-action: manipulation;
+        transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+            box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+            color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+        user-select: none;
+        -webkit-user-select: none;
+        vertical-align: middle;
+    }
+
+    .relawan:hover,
+    .relawan:focus {
+        background-color: #ffcc00;
+        color: white;
+    }
+
+    .relawan:active {
+        background: #09223b;
+        color: rgb(255, 255, 255, 0.7);
+    }
+
+    .relawan:disabled {
+        cursor: not-allowed;
+        background: rgba(0, 0, 0, 0.08);
+        color: rgba(0, 0, 0, 0.3);
+    }
+
+    .info {
+        margin-top: 3rem;
+        margin-left: 2rem;
+        align-items: center;
+        background-color: white;
+        border: 0;
+        border-radius: 100px;
+        box-sizing: border-box;
+        color: #111111;
+        display: inline-flex;
+        font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
+            "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans",
+            Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji",
+            "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        justify-content: center;
+        line-height: 20px;
+        width: 200px;
+        height: 80px;
+        overflow: hidden;
+        padding: 0px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+        touch-action: manipulation;
+        transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+            box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+            color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+        user-select: none;
+        -webkit-user-select: none;
+        vertical-align: middle;
+    }
+    /* CSS untuk teks bergerak */
+    .moving-text-container {
+        color: white;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        margin-top: 2rem;
+        overflow: hidden; /* Menghindari teks berlebihan keluar dari area yang ditentukan */
+    }
+
+    .moving-text {
+        /* display: block; Membuat teks berjalan secara horizontal dalam satu baris */
+        animation: moveText 30s linear infinite; /* Animasi bergerak dari kanan ke kiri */
+    }
+
+    @keyframes moveText {
+        0% {
+            transform: translateX(
+                100%
+            ); /* Teks mulai dari posisi di luar area tampilan di sisi kanan */
+        }
+        100% {
+            transform: translateX(
+                -100%
+            ); /* Teks bergerak hingga keluar dari area tampilan di sisi kiri */
+        }
+    }
+
+    .konten-tengah-berita {
+        margin-top: 2rem;
+    }
+    .berita-1 {
+        width: 420px;
+        height: 283px;
+        flex-shrink: 0;
+        /* margin-left: -0.2em; */
+    }
+    .berita-1 img {
+        width: 300px;
+        height: 283px;
+        flex-shrink: 0;
+        margin-left: -0.2em;
+    }
+    .berita-1 button {
+        border-radius: 10px;
+        width: 10rem;
+        height: 3rem;
+        border: 0;
+        margin-top: 0.5rem;
+        margin-right: 7rem;
+    }
+    .berita-1 h2 {
+        margin: auto;
+    }
+    .berita-1 p {
+        color: white;
+        text-align: left;
+        margin-left: 1rem;
+        font-weight: 400;
+    }
+    .kanan-berita {
+        /* padding-bottom: 6rem; */
+
+        width: 450px;
+        background-color: #ffcc00;
+    }
+    .buttprof button {
+        margin-left: -20rem;
+        width: 8rem;
+        background-color: #111111;
+        color: white;
+        border: none;
+        margin-left: -17rem;
+    }
+    .buttprof p {
+        margin-bottom: 15rem;
+        margin-left: 1rem;
+        text-align: left;
+    }
+    .konten-tengah-bawah {
+        background-color: white;
+        height: 1024px;
+    }
+    .konten-tengah-bawah h3 {
+        margin-top: 5rem;
+        text-align: center;
+    }
+    .konten-tengah-bawah h1 {
+        margin-top: 4rem;
+        text-align: center;
+    }
+    .konten-tengah-bawah button {
+        border: none;
+        font-size: 14px;
+        font-weight: bold;
+        height: 3rem;
+        width: 10rem;
+        color: white;
+        background-color: #111111;
+        border-radius: 100px;
+    }
+    .konten-tengah-bawah button:hover,
+    .konten-tengah-bawah:focus {
+        background-color: #ffcc00;
+        color: #111111;
+        cursor: pointer;
+    }
+    .satu button {
+        background-color: #ffcc00;
+        color: #111111;
+    }
+    .satu button:hover,
+    .satu:focus {
+        background-color: #111111;
+        color: white;
+    }
+    .dua button {
+        background-color: #ffcc00;
+        color: #111111;
+    }
+    .dua button:hover,
+    .dua:focus {
+        background-color: #111111;
+        color: white;
+    }
+
+    .dukungan2 {
+        margin-top: 1rem;
+    }
+    .dukung p {
+        padding-left: 5rem;
+        padding-right: 5rem;
+        font-weight: 400;
+    }
+    .gambar-aff img {
+        width: 100%;
+        height: 600px;
+        margin-top: -32rem;
+    }
+    .gambar-aff p {
+        color: white;
+        text-align: center;
+        margin-top: -20rem;
+        font-size: 38px;
+        font-weight: bold;
+    }
+    .sosmed {
+        height: 100px;
+        margin-top: 10rem;
+        margin-bottom: 10rem;
+    }
+    .sosmed table {
+        width: 100%;
+        table-layout: fixed; /* Agar lebar kolom tetap */
+        border-collapse: collapse;
+    }
+
+    .sosmed th {
+        padding: 10px;
+        text-align: center; /* Agar konten di tengah */
+    }
+
+    .sosmed h2 {
+        /* margin: 0; Menghapus margin default pada h2s */
+        text-align: left;
+        margin-left: 2rem;
+    }
+    .no-urut button {
+        border-radius: 10000px;
+        height: 171px;
+        width: 171px;
+        color: white;
+        background-color: #111111;
+        border: 0;
+        font-size: 84px;
+        font-weight: bold;
+    }
+    .link {
+        margin-top: 2rem;
+        font-size: 28px;
+        margin-left: 8rem;
+        text-indent: 1rem;
+    }
+    .link a {
+        text-decoration: none;
+        color: #111111;
     }
 }
-
-.konten-tengah-berita {
-    margin-top: 2rem;
-}
-.berita-1 {
-    width: 420px;
-    height: 283px;
-    flex-shrink: 0;
-    /* margin-left: -0.2em; */
-}
-.berita-1 img {
-    width: 300px;
-    height: 283px;
-    flex-shrink: 0;
-    margin-left: -0.2em;
-}
-.berita-1 button {
-    border-radius: 10px;
-    width: 10rem;
-    height: 3rem;
-    border: 0;
-    margin-top: 0.5rem;
-    margin-right: 7rem;
-}
-.berita-1 h2 {
-    margin: auto;
-}
-.berita-1 p {
-    color: white;
-    text-align: left;
-    margin-left: 1rem;
-    font-weight: 400;
-}
-.kanan-berita {
-    /* padding-bottom: 6rem; */
-
-    width: 450px;
-    background-color: #ffcc00;
-}
-.buttprof button {
-    margin-left: -20rem;
-    width: 8rem;
-    background-color: #111111;
-    color: white;
-    border: none;
-    margin-left: -17rem;
-}
-.buttprof p {
-    margin-bottom: 15rem;
-    margin-left: 1rem;
-    text-align: left;
-}
-.konten-tengah-bawah {
-    background-color: white;
-    height: 1024px;
-}
-.konten-tengah-bawah h3 {
-    margin-top: 5rem;
-    text-align: center;
-}
-.konten-tengah-bawah h1 {
-    margin-top: 4rem;
-    text-align: center;
-}
-.konten-tengah-bawah button {
-    border: none;
-    font-size: 14px;
-    font-weight: bold;
-    height: 3rem;
-    width: 10rem;
-    color: white;
-    background-color: #111111;
-    border-radius: 100px;
-}
-.konten-tengah-bawah button:hover,
-.konten-tengah-bawah:focus {
-    background-color: #ffcc00;
-    color: #111111;
-    cursor: pointer;
-}
-.satu button {
-    background-color: #ffcc00;
-    color: #111111;
-}
-.satu button:hover,
-.satu:focus {
-    background-color: #111111;
-    color: white;
-}
-.dua button {
-    background-color: #ffcc00;
-    color: #111111;
-}
-.dua button:hover,
-.dua:focus {
-    background-color: #111111;
-    color: white;
-}
-
-.dukungan2 {
-    margin-top: 1rem;
-}
-.dukung p {
-    padding-left: 5rem;
-    padding-right: 5rem;
-    font-weight: 400;
-}
-.gambar-aff img {
-    width: 100%;
-    height: 600px;
-    margin-top: -32rem;
-}
-.gambar-aff p {
-    color: white;
-    text-align: center;
-    margin-top: -20rem;
-    font-size: 38px;
-    font-weight: bold;
-}
-.sosmed {
-    height: 100px;
-    margin-top: 10rem;
-    margin-bottom: 10rem;
-}
-.sosmed table {
-    width: 100%;
-    table-layout: fixed; /* Agar lebar kolom tetap */
-    border-collapse: collapse;
-}
-
-.sosmed th {
-    padding: 10px;
-    text-align: center; /* Agar konten di tengah */
-}
-
-.sosmed h2 {
-    /* margin: 0; Menghapus margin default pada h2s */
-    text-align: left;
-    margin-left: 2rem;
-}
-.no-urut button {
-    border-radius: 10000px;
-    height: 171px;
-    width: 171px;
-    color: white;
-    background-color: #111111;
-    border: 0;
-    font-size: 84px;
-    font-weight: bold;
-}
-.link {
-    margin-top: 2rem;
-    font-size: 28px;
-    margin-left: 8rem;
-    text-indent: 1rem;
-}
-.link a {
-    text-decoration: none;
-    color: #111111;
-}
-}
-
-
-
 
 /* laptop */
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -463,9 +460,9 @@ body {
         cursor: pointer;
         display: inline-flex;
         font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
-            "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
-            "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-            "Lucida Grande", Helvetica, Arial, sans-serif;
+            "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans",
+            Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji",
+            "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
         font-size: 16px;
         font-weight: 600;
         justify-content: center;
@@ -518,9 +515,9 @@ body {
         cursor: pointer;
         display: inline-flex;
         font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
-            "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
-            "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-            "Lucida Grande", Helvetica, Arial, sans-serif;
+            "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans",
+            Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji",
+            "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
         font-size: 16px;
         font-weight: 600;
         justify-content: center;
@@ -570,9 +567,9 @@ body {
         color: #111111;
         display: inline-flex;
         font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
-            "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
-            "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-            "Lucida Grande", Helvetica, Arial, sans-serif;
+            "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans",
+            Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji",
+            "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
         font-size: 16px;
         font-weight: 600;
         justify-content: center;
@@ -778,10 +775,6 @@ body {
     }
 }
 
-
-
-
-
 /* Style for mobile screens */
 @media (max-width: 480px) {
     /* Your CSS styles for mobile here */
@@ -854,9 +847,9 @@ body {
         cursor: pointer;
         display: inline-flex;
         font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
-            "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
-            "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-            "Lucida Grande", Helvetica, Arial, sans-serif;
+            "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans",
+            Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji",
+            "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
         font-size: 16px;
         font-weight: 600;
         justify-content: center;
@@ -909,9 +902,9 @@ body {
         cursor: pointer;
         display: inline-flex;
         font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
-            "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
-            "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-            "Lucida Grande", Helvetica, Arial, sans-serif;
+            "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans",
+            Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji",
+            "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
         font-size: 16px;
         font-weight: 600;
         justify-content: center;
@@ -961,9 +954,9 @@ body {
         color: #111111;
         display: inline-flex;
         font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
-            "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
-            "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-            "Lucida Grande", Helvetica, Arial, sans-serif;
+            "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans",
+            Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji",
+            "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
         font-size: 16px;
         font-weight: 600;
         justify-content: center;

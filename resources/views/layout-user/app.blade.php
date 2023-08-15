@@ -12,9 +12,9 @@
 
     @php
         use App\Models\Setting;
-
+        
         $partai = Setting::where('id_partai', 23)->get();
-
+        
     @endphp
     @foreach ($partai as $s)
         <style>
@@ -87,7 +87,7 @@
                                 <h1 style="color: white;">{{ $partai->where('id_partai', 23)->first()->no_urut }}</h1>
                             </div>
                             <div class="prof">
-                                <p id="bawah3">Calon Anggota DPRD Kabupaten </p>
+                                <p id="bawah3">Calon Anggota DPRD Kabupaten Cirebon</p>
                                 <p id="bawah4">Tahun 2024</p>
                             </div>
                         </th>

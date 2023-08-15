@@ -74,9 +74,8 @@
                     </th>
                     <th>
                         <div class="moving-text-container">
-                            <p class="moving-text">Lorem ipsum dolor sit amet, Reynanda anak kesayangan Papa Bin. Lorem
-                                ipsum dolor sit amet, Reynanda anak kesayangan Papa Bin. Lorem ipsum dolor sit amet,
-                                Reynanda anak kesayangan Papa Bin.</p>
+                            <p class="moving-text">AYO DUKUNG KANGIDIN AYO DUKUNG KANGIDIN AYO DUKUNG KANGIDIN AYO DUKUNG
+                                KANGIDIN AYO DUKUNG KANGIDIN AYO DUKUNG KANGIDIN AYO DUKUNG KANGIDIN.</p>
                         </div>
                     </th>
 
@@ -86,43 +85,24 @@
         <table class="konten-tengah-berita">
             <thead>
                 <tr>
-                    <th class="berita-1">
-                        <img src="images/kangidin.png" alt="">
-                        <button>
-                            <h2>25 Juli 2023</h2>
-                        </button>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate temporibus dolore distinctio
-                            omnis exercitationem animi harum placeat illo accusamus consectetur atque, magni cupiditate
-                            error nulla deserunt, aspernatur quaerat laboriosam quibusdam!</p>
-                    </th>
-                    <th class="berita-1">
-                        <img src="images/kangidin.png" alt="">
-                        <button>
-                            <h2>25 Juli 2023</h2>
-                        </button>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate temporibus dolore distinctio
-                            omnis exercitationem animi harum placeat illo accusamus consectetur atque, magni cupiditate
-                            error nulla deserunt, aspernatur quaerat laboriosam quibusdam!</p>
-                    </th>
-                    <th class="berita-1">
-                        <img src="images/kangidin.png" alt="">
-                        <button>
-                            <h2>25 Juli 2023</h2>
-                        </button>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate temporibus dolore distinctio
-                            omnis exercitationem animi harum placeat illo accusamus consectetur atque, magni cupiditate
-                            error nulla deserunt, aspernatur quaerat laboriosam quibusdam!</p>
-                    </th>
-                    <th class="kanan-berita">
-                        <div class="buttprof">
-                            <button>
-                                <h2>PROFILE</h2>
-                            </button>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et qui quis, id non beatae illo
-                                delectus quisquam ducimus unde dolorum reiciendis rerum, voluptatibus ipsam neque sit
-                                maiores similique. Minima, modi.</p>
-                        </div>
-                    </th>
+                    @foreach ($berita as $item)
+                        <th class="berita-1">
+                            <img src="{{ asset('image/' . $item->image) }}" alt="">
+                            <h2 class="judul" style="color: white; text-align:left; margin-left: 1rem;">{{ $item->judul }}
+                            </h2>
+                            <p>{{ \Illuminate\Support\Str::limit($item->isi_berita, 200) }}</p>
+
+                        </th>
+                    @endforeach
+                    @foreach ($berita as $item)
+                        <th class="berita-1">
+                            <img src="{{ asset('image/' . $item->image) }}" alt="">
+                            <h2 class="judul" style="color: white; text-align:left; margin-left: 1rem;">
+                                {{ $item->judul }}</h2>
+                            <p>{{ \Illuminate\Support\Str::limit($item->isi_berita, 200) }}</p>
+
+                        </th>
+                    @endforeach
                 </tr>
             </thead>
         </table>

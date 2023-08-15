@@ -6,14 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Berita extends Model
 {
-    protected $table = 'berita';
-    protected $primaryKey = 'id';
+    protected $table = 'news';
+    protected $primaryKey = 'id_news';
     protected $fillable = [
-        "id_caleg",
-        "id_partai",
         "judul",
-        "isi",
-        "author",
-        "komentar"
+        "isi_berita",
+        "tgl_publish",
+        "id_caleg",
+        "gambar",
+        "aktif"
     ];
 }
