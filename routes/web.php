@@ -28,6 +28,7 @@ Route::get('/profile', [ProfileController::class, 'profile']);
 Route::get('/berita', [BeritaController::class, 'berita']);
 Route::get('/relawan', [RelawanController::class, 'relawan']);
 Route::get('/dukungan', [DukunganController::class, 'dukungan']);
+Route::post('/create-dukungan', [DukunganController::class, 'store']);
 Route::post('/create-relawan', [IdentitasController::class, 'storeRelawan']);
 
 Route::middleware(\App\Http\Middleware\AdminMiddleware::class)->group(function () {

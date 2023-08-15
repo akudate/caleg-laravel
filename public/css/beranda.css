@@ -364,7 +364,7 @@
     .sosmed h2 {
         /* margin: 0; Menghapus margin default pada h2s */
         text-align: left;
-        margin-left: 2rem;
+        margin-left: 4rem;
     }
     .no-urut button {
         border-radius: 10000px;

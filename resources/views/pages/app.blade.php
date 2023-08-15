@@ -148,8 +148,8 @@
         </table>
     </div>
     <div class="gambar-aff">
-        <img src="images/fotopkb.png" alt="">
-        <p>Lorem ipsum, dolor sit amet <br> consectetur adipisicing elit.</p>
+        <img src="images/fotopkb.png" alt="" style="filter: brightness(50%);">
+        <p style="filter: brightness(100%);">Mari Dukung Kami<br> Dan Bergabung Bersama Kami.</p>
     </div>
     <div class="sosmed" style="">
         <table>
@@ -160,20 +160,17 @@
                     </th>
                     <th class="no-urut"><button>{{ $partai->where('id_partai', 23)->first()->no_urut }}</button></th>
                     <th class="link">
-                        <a href="#">
+                        <a href="{{ $ig->link_medsos }}">
                             <i class="bi bi-instagram"></i>
                         </a>
-                        <a href="#">
+                        <a href="{{ $fb->link_medsos }}">
                             <i class="bi bi-facebook"></i>
                         </a>
-                        <a href="#">
+                        <a href="{{ $yt->link_medsos }}">
                             <i class="bi bi-youtube"></i>
                         </a>
-                        <a href="#">
-                            <i class="bi bi-twitter"></i>
-                        </a>
-                        <a href="#">
-                            <i class="bi bi-geo-alt-fill"></i>
+                        <a href="{{ $tiktok->link_medsos }}">
+                            <i class="bi bi-tiktok"></i>
                         </a>
                     </th>
                 </tr>

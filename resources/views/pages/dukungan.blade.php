@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     @php
         use App\Models\Setting;
-
+        
         $partai = Setting::where('id_partai', 23)->get();
-
+        
     @endphp
     @foreach ($partai as $s)
         <style>
@@ -43,7 +43,6 @@
                                     foreach ($dukungan as $comment) {
                                         echo '<div class="comment">';
                                         echo '<span class="author">' . $comment['nama'] . '</span><br>';
-                                        echo '<span class="timestamp">' . $comment['created_at']->format('D, d M Y - H:i') . '</span>';
                                         echo '<p class="comment-text">' . $comment['pesan'] . '</p>';
                                         echo '</div>';
                                     }
@@ -75,7 +74,7 @@
                                         placeholder="Nama (wajib diisi)">
                                     <input class="form-control" type="email" name="email"
                                         placeholder="Email (wajib diisi)">
-
+                                    <input type="hidden" name="id_caleg" value="62">
                                     <button class="form-control" type="submit">Kirim</button>
                                 </form>
                                 </p>
