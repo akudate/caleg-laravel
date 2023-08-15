@@ -21,6 +21,11 @@
                 color: white;
                 opacity: 0.5;
             }
+
+            .comment {
+                background-color: {{ $s->warna }};
+                color: white;
+            }
         </style>
     @endforeach
     <div class="dukungan">

@@ -36,10 +36,9 @@
                         <tr>
                             @foreach ($berita as $item)
                                 <th class="berita-1">
-                                    <img src="{{ asset('image/' . $item->image) }}" alt="">
+                                    <img src="{{ asset($item->gambar) }}" alt="">
                                     <h2 class="judul">{{ $item->judul }}</h2>
-                                    <p>{{ $item->isi_berita }}</p>
-
+                                    <p>{{ \Illuminate\Support\Str::limit($item->isi_berita, 200) }}</p>
                                 </th>
                             @endforeach
                         </tr>

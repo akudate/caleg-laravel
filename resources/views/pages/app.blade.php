@@ -87,7 +87,7 @@
                 <tr>
                     @foreach ($berita as $item)
                         <th class="berita-1">
-                            <img src="{{ asset('image/' . $item->image) }}" alt="">
+                            <img src="{{ asset($item->gambar) }}" alt="">
                             <h2 class="judul" style="color: white; text-align:left; margin-left: 1rem;">{{ $item->judul }}
                             </h2>
                             <p>{{ \Illuminate\Support\Str::limit($item->isi_berita, 200) }}</p>
@@ -96,11 +96,10 @@
                     @endforeach
                     @foreach ($berita as $item)
                         <th class="berita-1">
-                            <img src="{{ asset('image/' . $item->image) }}" alt="">
+                            <img src="{{ asset($item->gambar) }}" alt="">
                             <h2 class="judul" style="color: white; text-align:left; margin-left: 1rem;">
                                 {{ $item->judul }}</h2>
                             <p>{{ \Illuminate\Support\Str::limit($item->isi_berita, 200) }}</p>
-
                         </th>
                     @endforeach
                 </tr>
@@ -117,7 +116,7 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem est praesentium vero unde
                             cum sint non voluptatibus eos tenetur iure, facere quidem iusto! Corporis iusto est architecto
                             ex vel similique.</p>
-                        <a href="relawan">
+                        <a href="https://kangidin.online/#/">
                             <button>
                                 BERGABUNG
                             </button>
@@ -137,7 +136,7 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem est praesentium vero unde
                             cum sint non voluptatibus eos tenetur iure, facere quidem iusto! Corporis iusto est architecto
                             ex vel similique.</p>
-                        <a href="relawan">
+                        <a href="https://kangidin.online/#/">
                             <button>
                                 BERGABUNG
                             </button>

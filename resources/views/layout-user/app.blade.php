@@ -64,7 +64,7 @@
             <a href="/dukungan" class="text">
                 <p>Dukungan</p>
             </a>
-            <a href="/relawan" class="text">
+            <a href="https://kangidin.online/#/" class="text">
                 <p>Relawan</p>
             </a>
         </div>
