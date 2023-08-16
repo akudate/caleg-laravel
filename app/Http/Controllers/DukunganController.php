@@ -34,7 +34,7 @@ class DukunganController extends Controller
             'id_caleg'   => $request->id_caleg,
 
         ]);
-        return redirect('pages.dukungan')->with('success', 'Dukungan Berhasil Dibuat');
+        return redirect('dukungan')->with('success', 'Dukungan Berhasil Dibuat');
     }
     public function update(Request $request)
     {

@@ -18,6 +18,19 @@ class BeritaController extends Controller
 
         return view('pages.berita', compact('berita', 'profile', 'partai'));
     }
+
+    public function detail_berita()
+    {
+        $berita = Berita::where('id_caleg', 62)->get();
+        $profile = Profile::where('id_caleg', 62)->first(); // Menggunakan first() untuk mengambil satu data
+        $partai = Setting::where('id_partai', 23)->get(); // Menggunakan get() untuk mengambil data
+
+
+        return view('pages.detailBerita', compact('berita', 'profile', 'partai'));
+    }
+
+
+
     public function store(Request $request)
     {
         $request->validate([

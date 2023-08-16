@@ -113,9 +113,7 @@
                 <tr>
                     <th class="satu">
                         <h3>JADI RELAWAN</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem est praesentium vero unde
-                            cum sint non voluptatibus eos tenetur iure, facere quidem iusto! Corporis iusto est architecto
-                            ex vel similique.</p>
+                        <p>Jadilah Bagian Kami dan Raih Kemenangan Bersama.</p>
                         <a href="https://kangidin.online/#/">
                             <button>
                                 BERGABUNG
@@ -133,9 +131,7 @@
                     </th>
                     <th class="dua">
                         <h3>JADI RELAWAN</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem est praesentium vero unde
-                            cum sint non voluptatibus eos tenetur iure, facere quidem iusto! Corporis iusto est architecto
-                            ex vel similique.</p>
+                        <p>Bergabung dan Berjuang Bersama Kami.</p>
                         <a href="https://kangidin.online/#/">
                             <button>
                                 BERGABUNG

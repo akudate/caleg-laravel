@@ -27,7 +27,7 @@
                 <th class="kanan">
                     <h1>{{ $profile->nama_lengkap }}</h1> <br>
                     <hr>
-                    <p class="posisi">Calon Presiden Indonesia Tahun 2099</p>
+                    <p class="posisi">Calon Anggota DPRD Kabupaten Cirebon</p>
                     <p class="partai">{{ $profile->partai->nama_partai }}</p>
                     <div class="sosmed">
                         <a href="{{ $ig->link_medsos }}">
