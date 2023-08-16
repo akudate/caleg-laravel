@@ -6,8 +6,10 @@ body {
 .berita {
     margin-top: 15rem;
     background-color: white;
+
     /* height: 1000px; */
 }
+
 .input-box {
     padding-right: 125px;
     /* position: relative; */

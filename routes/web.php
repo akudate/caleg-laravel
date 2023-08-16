@@ -26,7 +26,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [BerandaController::class, 'caleg']);
 Route::get('/profile', [ProfileController::class, 'profile']);
 Route::get('/berita', [BeritaController::class, 'berita']);
-Route::get('/berita/{id}', [BeritaController::class, 'detail_berita']);
+Route::get('/berita/{id_news}', [BeritaController::class, 'detail_berita'])->name('detail-berita');
 Route::get('/relawan', [RelawanController::class, 'relawan']);
 Route::get('/dukungan', [DukunganController::class, 'dukungan']);
 Route::post('/create-dukungan', [DukunganController::class, 'store']);

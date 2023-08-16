@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Caleg</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 
@@ -74,7 +74,7 @@
                     <tr style="display: flex;">
                         <th class="kiri" style="display: flex;">
                             <div class="nav-image">
-                                <img src="images/muhyidin.png" alt="">
+                                <img src="/images/muhyidin.png" alt="">
                             </div>
                             <div class="prof">
                                 <p id="atas">{{ $profile->nama_lengkap }}</p>
@@ -105,7 +105,7 @@
             <thead>
                 <th class="foot" style="display: flex;  margin-top: 2rem;">
                     <div class="nav-image">
-                        <img src="images/muhyidin.png" alt="">
+                        <img src="/images/muhyidin.png" alt="">
                     </div>
                     <div class="prof">
                         <p id="atas">{{ $profile->nama_lengkap }}</p>

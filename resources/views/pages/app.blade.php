@@ -86,20 +86,25 @@
             <thead>
                 <tr>
                     @foreach ($berita as $item)
-                        <th class="berita-1">
-                            <img src="{{ asset($item->gambar) }}" alt="">
-                            <h2 class="judul" style="color: white; text-align:left; margin-left: 1rem;">{{ $item->judul }}
-                            </h2>
-                            <p>{{ \Illuminate\Support\Str::limit($item->isi_berita, 200) }}</p>
+                        <a href="/berita/{{ $item->id_news }}" style="text-decoration: none; color: #111111;">
+                            <th class="berita-1">
+                                <img src="{{ asset($item->gambar) }}" alt="">
+                                <h2 class="judul" style="color: white; text-align:left; margin-left: 1rem;">
+                                    {{ $item->judul }}
+                                </h2>
+                        </a>
+                        <p>{{ \Illuminate\Support\Str::limit($item->isi_berita, 200) }}</p>
 
                         </th>
                     @endforeach
                     @foreach ($berita as $item)
-                        <th class="berita-1">
-                            <img src="{{ asset($item->gambar) }}" alt="">
-                            <h2 class="judul" style="color: white; text-align:left; margin-left: 1rem;">
-                                {{ $item->judul }}</h2>
-                            <p>{{ \Illuminate\Support\Str::limit($item->isi_berita, 200) }}</p>
+                        <a href="/berita/{{ $item->id_news }}" style="text-decoration: none; color: #111111;">
+                            <th class="berita-1">
+                                <img src="{{ asset($item->gambar) }}" alt="">
+                                <h2 class="judul" style="color: white; text-align:left; margin-left: 1rem;">
+                                    {{ $item->judul }}</h2>
+                        </a>
+                        <p>{{ \Illuminate\Support\Str::limit($item->isi_berita, 200) }}</p>
                         </th>
                     @endforeach
                 </tr>
