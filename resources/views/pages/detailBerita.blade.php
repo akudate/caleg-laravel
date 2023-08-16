@@ -23,40 +23,16 @@
             }
         </style>
     @endforeach
-    <div class="berita" style="margin-left: 30rem">
+    <div class="berita">
         <div class="row">
             <div class="col-8">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>
-                                <h1>Detail Berita</h1>
-                            </th>
-                        </tr>
-                        <tr>
-                            <th class="berita-1">
-
-                                <img src="{{ asset($berita->gambar) }}" alt=""">
-                                <h2 class="judul">{{ $berita->judul }}</h2>
-                                <p>{{ $berita->isi_berita }}</p>
-                            </th>
-                        </tr>
-                        {{-- <tr>
-                            @foreach ($berita2 as $item)
-                                <th class="berita-1">
-                                    <img src="{{ asset('image/' . $item->image) }}" alt="">
-                                    <h2 class="judul">{{ $item->judul }}</h2>
-                                    <p>{{ $item->isi }}</p>
-                                    <p class="muted-text">{{ $item->created_at->format('d M Y') }} / {{ $item->author }}</p>
-                                </th>
-                            @endforeach
-                        </tr> --}}
-                    </thead>
-                </table>
+                <div class="berita-1">
+                    <h1 class="judul">{{ $berita->judul }}</h1>
+                    <img src="{{ asset($berita->gambar) }}" alt=""">
+                    <p>{{ $berita->isi_berita }}</p>
+                </div>
             </div>
-
         </div>
-
     </div>
 @endsection
 {{-- @section('script')
